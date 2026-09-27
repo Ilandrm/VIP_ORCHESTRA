@@ -41,6 +41,10 @@ export default defineNuxtConfig({
     enabled: false
   },
 
+  robots: {
+    robotsTxt: process.env.NUXT_APP_BASE_URL === '/' || !process.env.NUXT_APP_BASE_URL
+  },
+
   typescript: {
     strict: true
   }

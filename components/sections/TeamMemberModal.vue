@@ -12,7 +12,7 @@
           class="absolute right-4 top-4 rounded-full border border-text/20 p-2 transition-colors duration-300 hover:border-accent"
           @click="$emit('close')"
         >
-          <img src="/images/ico-close.svg" alt="" class="h-4 w-4" />
+          <img :src="withBaseUrl('/images/ico-close.svg')" alt="" class="h-4 w-4" />
         </button>
 
         <img :src="member.photo" :alt="member.name" class="h-64 w-full object-cover md:h-72 md:w-56" />

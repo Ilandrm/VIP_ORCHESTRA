@@ -1,7 +1,7 @@
 <template>
   <div class="arrow-bottom flex flex-col items-center gap-2 transition-opacity duration-500" :class="visible ? 'opacity-100' : 'opacity-0'">
     <span class="text-xs uppercase tracking-widest text-text/80">Scroll</span>
-    <img src="/images/ico-arrow-bottom.svg" alt="" class="h-4 w-4 animate-bounce" />
+    <img :src="withBaseUrl('/images/ico-arrow-bottom.svg')" alt="" class="h-4 w-4 animate-bounce" />
   </div>
 </template>
 

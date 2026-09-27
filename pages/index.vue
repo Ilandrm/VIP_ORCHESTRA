@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VideoBackground src="/videos/home.mp4" poster="/images/poster-black.jpg">
+    <VideoBackground :src="withBaseUrl('/videos/home.mp4')" :poster="withBaseUrl('/images/poster-black.jpg')">
       <div class="flex h-full flex-col items-center justify-center px-6 text-center">
         <div class="absolute inset-x-0 bottom-10 flex justify-center">
           <ScrollIndicator />

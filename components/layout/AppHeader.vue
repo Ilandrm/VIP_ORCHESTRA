@@ -5,7 +5,7 @@
   >
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
       <NuxtLink to="/" class="flex items-center" @click="handleNavClick">
-        <img src="/images/logo.png" alt="VIP" class="h-16 w-16 md:h-20 md:w-20 white-filter" />
+        <img :src="withBaseUrl('/images/logo.png')" alt="VIP" class="h-16 w-16 md:h-20 md:w-20 white-filter" />
       </NuxtLink>
 
       <nav class="hidden md:block">

@@ -37,7 +37,7 @@
       aria-label="Previous"
       class="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-4 rounded-full border border-text/20 p-3 transition-colors duration-300 hover:border-accent md:-translate-x-8"
     >
-      <img src="/images/ico-left-arrow.svg" alt="" class="h-4 w-4 white-filter" />
+      <img :src="withBaseUrl('/images/ico-left-arrow.svg')" alt="" class="h-4 w-4 white-filter" />
     </button>
     <button
       ref="nextButton"
@@ -45,7 +45,7 @@
       aria-label="Next"
       class="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 rounded-full border border-text/20 p-3 transition-colors duration-300 hover:border-accent md:translate-x-8"
     >
-      <img src="/images/ico-right-arrow.svg" alt="" class="h-4 w-4 white-filter" />
+      <img :src="withBaseUrl('/images/ico-right-arrow.svg')" alt="" class="h-4 w-4 white-filter" />
     </button>
   </div>
 </template>

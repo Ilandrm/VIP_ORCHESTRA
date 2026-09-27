@@ -17,7 +17,7 @@
     <ProjectsGrid subtitle="POUR TOUS VOS EVENEMENTS" :projects="projectsInGrid" size="3">
     </ProjectsGrid>
 
-    <LogoVideoSection title="ILS NOUS FONT CONFIANCE" src="/videos/logo-wedding.mp4" :logos="brandLogos"/>
+    <LogoVideoSection title="ILS NOUS FONT CONFIANCE" :src="withBaseUrl('/videos/logo-wedding.mp4')" :logos="brandLogos"/>
 
     <ClientsShowcase title=" Fais de ta vie un rêve, et d'un rêve une réalité" :clients="clients" />
 
@@ -46,25 +46,25 @@ const brandLogos: string[] = [
   '/brand/potel.png',
   '/brand/wagram.png',
   '/brand/westin.png'
-]
+].map(withBaseUrl)
 const heroSlides: HeroSlide[] = [
-  { id: 'slide-1', type: 'image', image: '/images/slide0.jpeg' },
-  { id: 'slide-2', type: 'image', image: '/images/slide1.jpg' },
-  { id: 'slide-3', type: 'image', image: '/images/slide2.jpg' },
-  { id: 'slide-4', type: 'image', image: '/images/slide3.jpg' },
-  { id: 'slide-5', type: 'image', image: '/images/slide4.jpg' }
+  { id: 'slide-1', type: 'image', image: withBaseUrl('/images/slide0.jpeg') },
+  { id: 'slide-2', type: 'image', image: withBaseUrl('/images/slide1.jpg') },
+  { id: 'slide-3', type: 'image', image: withBaseUrl('/images/slide2.jpg') },
+  { id: 'slide-4', type: 'image', image: withBaseUrl('/images/slide3.jpg') },
+  { id: 'slide-5', type: 'image', image: withBaseUrl('/images/slide4.jpg') }
 ]
 
 const projects: Project[] = [
-  { title: 'Ceremony', src: '/videos/ceremony.mp4', poster: '/images/poster-min-ceremony.jpg' },
-  { title: 'Cocktail', src: '/videos/cocktail.mp4', poster: '/images/poster-min-cocktail.jpg' },
-  { title: 'Dinner', src: '/videos/dinner.mp4', poster: '/images/poster-min-dinner.jpg' },
-  { title: 'Party', src: '/videos/party.mp4', poster: '/images/poster-min-party.jpg' }
+  { title: 'Ceremony', src: withBaseUrl('/videos/ceremony.mp4'), poster: withBaseUrl('/images/poster-min-ceremony.jpg') },
+  { title: 'Cocktail', src: withBaseUrl('/videos/cocktail.mp4'), poster: withBaseUrl('/images/poster-min-cocktail.jpg') },
+  { title: 'Dinner', src: withBaseUrl('/videos/dinner.mp4'), poster: withBaseUrl('/images/poster-min-dinner.jpg') },
+  { title: 'Party', src: withBaseUrl('/videos/party.mp4'), poster: withBaseUrl('/images/poster-min-party.jpg') }
 ]
 const projectsInGrid: Project[] = [
-  { title: 'ÉVÈNEMENTIEL', poster: '/images/elena-de-soto-w423NnHFjFg-unsplash-768x768.jpg' },
-  { title: 'CORPORATE', poster: '/images/britt-gaiser-hSAlu33padA-unsplash-768x768.jpg' },
-  { title: 'RÉCEPTION PRIVÉE', poster: '/images/chuttersnap-aEnH4hJ_Mrs-unsplash-768x768.jpg' }
+  { title: 'ÉVÈNEMENTIEL', poster: withBaseUrl('/images/elena-de-soto-w423NnHFjFg-unsplash-768x768.jpg') },
+  { title: 'CORPORATE', poster: withBaseUrl('/images/britt-gaiser-hSAlu33padA-unsplash-768x768.jpg') },
+  { title: 'RÉCEPTION PRIVÉE', poster: withBaseUrl('/images/chuttersnap-aEnH4hJ_Mrs-unsplash-768x768.jpg') }
 ]
 const clients: string[] = [
   'Kim Kardashian',

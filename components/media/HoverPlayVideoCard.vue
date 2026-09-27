@@ -26,7 +26,7 @@
         aria-label="Play"
         @click.stop="playVideo"
       >
-        <img src="/images/icon-play.svg" alt="" class="h-4 w-4" />
+        <img :src="withBaseUrl('/images/icon-play.svg')" alt="" class="h-4 w-4" />
       </button>
       <h5 class="text-base uppercase tracking-widest text-gold">{{ title }}</h5>
     </div>
