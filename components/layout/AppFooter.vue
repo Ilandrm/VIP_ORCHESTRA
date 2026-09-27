@@ -28,10 +28,10 @@
 
 <script setup lang="ts">
 const socialLinks = [
-  { name: 'Instagram', href: 'https://www.instagram.com/inspirationlivemusic/', icon: withBaseUrl('/images/instagram.svg') },
-  { name: 'TikTok', href: 'https://www.tiktok.com/@inspirationmusicart?lang=fr', icon: withBaseUrl('/images/tiktok.svg') },
-  { name: 'YouTube', href: 'https://www.youtube.com/channel/UCC5S-aYgmHOKmmbzlxHNO8g', icon: withBaseUrl('/images/youtube.svg') },
-  { name: 'LinkedIn', href: 'https://fr.linkedin.com/company/inspirationlivemusicconcept', icon: withBaseUrl('/images/linkedin.svg') }
+  { name: 'Instagram', href: 'https://www.instagram.com/vip_orchestra/', icon: withBaseUrl('/images/instagram.svg') },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@vip.orchestra?lang=fr', icon: withBaseUrl('/images/tiktok.svg') },
+  { name: 'YouTube', href: 'https://www.youtube.com/user/viporchestra', icon: withBaseUrl('/images/youtube.svg') },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/vip-orchestra-jsk-events/home/', icon: withBaseUrl('/images/linkedin.svg') }
 ]
 </script>
 <style>

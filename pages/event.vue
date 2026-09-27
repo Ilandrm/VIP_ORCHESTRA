@@ -56,10 +56,10 @@ const heroSlides: HeroSlide[] = [
 ]
 
 const projects: Project[] = [
-  { title: 'Ceremony', src: withBaseUrl('/videos/ceremony.mp4'), poster: withBaseUrl('/images/poster-min-ceremony.jpg') },
-  { title: 'Cocktail', src: withBaseUrl('/videos/cocktail.mp4'), poster: withBaseUrl('/images/poster-min-cocktail.jpg') },
-  { title: 'Dinner', src: withBaseUrl('/videos/dinner.mp4'), poster: withBaseUrl('/images/poster-min-dinner.jpg') },
-  { title: 'Party', src: withBaseUrl('/videos/party.mp4'), poster: withBaseUrl('/images/poster-min-party.jpg') }
+  { title: 'Ceremony', poster: withBaseUrl('/images/ErikaEli-1679-768x768.jpg') },
+  { title: 'Cocktail', poster: withBaseUrl('/images/David-Marmier-22-scaled.jpg') },
+  { title: 'Dinner', poster: withBaseUrl('/images/VIP-ORCHESTRA-_-WEDDINGS-0440-scaled.jpeg') },
+  { title: 'Party', poster: withBaseUrl('/images/IMG_2676-scaled.jpg') }
 ]
 const projectsInGrid: Project[] = [
   { title: 'ÉVÈNEMENTIEL', poster: withBaseUrl('/images/elena-de-soto-w423NnHFjFg-unsplash-768x768.jpg') },
@@ -90,7 +90,7 @@ const clients: string[] = [
 ]
 
 useSeoMeta({
-  title: 'Vip Orchestra - Wedding',
+  title: 'Vip Orchestra - evenement',
   description:
     '"Music is the universal language of celebration and love" It reveals the beauty and uniqueness of your Love Story. Live music band for luxury events.'
 })

@@ -26,7 +26,6 @@ import HoverPlayVideoCard from '~/components/media/HoverPlayVideoCard.vue'
 
 export interface Project {
   title: string
-  src: string
   poster: string
 }
 
