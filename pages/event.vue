@@ -45,7 +45,10 @@ const brandLogos: string[] = [
   '/brand/trianon.png',
   '/brand/potel.png',
   '/brand/wagram.png',
-  '/brand/westin.png'
+  '/brand/westin.png',
+  '/brand/pavillon.png',
+  '/brand/collectionneur.png'
+
 ].map(withBaseUrl)
 const heroSlides: HeroSlide[] = [
   { id: 'slide-1', type: 'image', image: withBaseUrl('/images/slide0.jpeg') },
