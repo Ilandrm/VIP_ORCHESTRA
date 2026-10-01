@@ -15,7 +15,7 @@ export default <Partial<Config>>{
         accent: '#cd2653'
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif']
+        sans: ['Playfair Display', 'serif']
       }
     }
   },

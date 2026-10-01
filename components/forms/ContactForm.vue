@@ -38,6 +38,22 @@
       </label>
     </div>
 
+    <div v-if="dynamicFields.length" class="grid gap-6 md:grid-cols-2">
+      <label
+        v-for="field in dynamicFields"
+        :key="field.key"
+        class="flex flex-col gap-2 text-sm text-text"
+      >
+        {{ field.label }}
+        <input
+          v-model="formState[field.key]"
+          :type="field.type"
+          required
+          class="input-field"
+        />
+      </label>
+    </div>
+
     <label class="flex flex-col gap-2 text-sm text-text">
       Message
       <textarea
@@ -51,19 +67,7 @@
     </label>
 
     <fieldset class="flex flex-col gap-3">
-      <legend class="mb-1 text-sm uppercase tracking-widest text-text/70">Besoin d'être contacter en retour ?</legend>
-      <div class="flex gap-6">
-        <label class="flex items-center gap-2 text-sm text-text">
-          <input v-model="formState.wantsCallback" type="radio" :value="true" class="accent-accent" @click.stop />
-          Oui
-        </label>
-        <label class="flex items-center gap-2 text-sm text-text">
-          <input v-model="formState.wantsCallback" type="radio" :value="false" class="accent-accent" @click.stop />
-          Non
-        </label>
-      </div>
       <input
-        v-if="formState.wantsCallback"
         v-model="formState.phone"
         type="tel"
         required
@@ -89,7 +93,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
 interface ContactFormState {
@@ -102,11 +106,17 @@ interface ContactFormState {
   wantsCallback: boolean
   phone: string
   hearAboutUs: string
+  eventDate: string
+  eventType: string
+  guestCount: string
+  venue: string
+  coupleNames: string
+  companyName: string
 }
 
 const emit = defineEmits<{ submit: [payload: ContactFormState] }>()
 
-const reasonOptions = ['Event', 'Corporate', 'Reception privé', 'Autre']
+const reasonOptions = ['Event', 'Mariage', 'Corporate', 'Réception privée', 'Autre']
 const hearAboutUsOptions = ['Bouche à oreille', 'Réseaux sociaux', 'Autre']
 
 const formState = reactive<ContactFormState>({
@@ -118,7 +128,46 @@ const formState = reactive<ContactFormState>({
   message: '',
   wantsCallback: false,
   phone: '',
-  hearAboutUs: ''
+  hearAboutUs: '',
+  eventDate: '',
+  eventType: '',
+  guestCount: '',
+  venue: '',
+  coupleNames: '',
+  companyName: ''
+})
+
+const dynamicFields = computed(() => {
+  switch (formState.reason) {
+    case 'Event':
+      return [
+        { key: 'eventDate', label: 'Date de l\'événement', type: 'date' },
+        { key: 'eventType', label: 'Type d\'événement', type: 'text' },
+        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' },
+        { key: 'venue', label: 'Lieu', type: 'text' }
+      ]
+    case 'Mariage':
+      return [
+        { key: 'eventDate', label: 'Date du mariage', type: 'date' },
+        { key: 'venue', label: 'Lieu de réception', type: 'text' },
+        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' },
+        { key: 'coupleNames', label: 'Noms des mariés', type: 'text' }
+      ]
+    case 'Corporate':
+      return [
+        { key: 'companyName', label: 'Nom de l\'entreprise', type: 'text' },
+        { key: 'eventDate', label: 'Date de l\'événement', type: 'date' },
+        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' }
+      ]
+    case 'Réception privée':
+      return [
+        { key: 'eventDate', label: 'Date de la réception', type: 'date' },
+        { key: 'venue', label: 'Lieu', type: 'text' },
+        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' }
+      ]
+    default:
+      return []
+  }
 })
 
 const isSubmitted = ref(false)
@@ -131,15 +180,17 @@ const handleSubmit = () => {
 
 <style scoped>
 .input-field {
-  background-color: var(--color-bg);
+  background-color: transparent;
   color: var(--color-text);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0;
+  padding: 0.5rem 0;
+  transition: border-color 0.3s ease;
 }
 
 .input-field:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 </style>

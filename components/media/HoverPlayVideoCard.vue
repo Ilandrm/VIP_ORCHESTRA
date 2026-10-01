@@ -6,7 +6,7 @@
   >
     <video
       ref="videoRef"
-      class="h-full w-full object-cover"
+      class="h-full w-full object-cover grayscale"
       :poster="poster"
       muted
       loop
@@ -17,7 +17,7 @@
     </video>
 
     <div v-if="src"
-         class="absolute inset-0 flex flex-col items-center justify-end gap-4 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300"
+         class="absolute inset-0 flex flex-col items-center justify-end pb-10 gap-4 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300"
       :class="isPlaying ? 'opacity-0' : 'opacity-100'"
     >
       <button
@@ -31,7 +31,7 @@
       <h5 class="text-base uppercase tracking-widest text-gold">{{ title }}</h5>
     </div>
     <div v-else
-         class="absolute inset-0 flex flex-col items-center justify-end gap-4 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300"
+         class="absolute inset-0 flex flex-col items-center pb-10 justify-end gap-4 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300"
          :class="isPlaying ? 'opacity-0' : 'opacity-100'"
     >
       <h5 class="text-base uppercase tracking-widest text-gold">{{ title }}</h5>

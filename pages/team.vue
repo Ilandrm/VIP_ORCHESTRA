@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <section class="px-6 pb-24 py-24 md:pb-32 py-32">
-      <h2 class="mb-16 text-center text-2xl font-semibold uppercase tracking-widest text-text md:text-3xl">
-        NOTRE ÉQUIPE
+    <section class="px-6 pb-24 py-24 md:pb-32 py-32 mt-10">
+      <h2 class="sign mb-16 text-center text-4xl tracking-wide text-gold md:text-6xl">
+        Notre équipe
       </h2>
       <TeamSwiper :members="teamMembers" @select="handleSelectMember" />
     </section>
@@ -96,3 +96,11 @@ useSeoMeta({
   description: 'Vip Orchestra redefines live entertainment at the highest level, merging visionary artistry with unmatched excellence.'
 })
 </script>
+<style>
+.sign {
+  font-family: 'Brittany Signature', cursive;
+}
+.text-gold {
+  color: #bca45d;
+}
+</style>

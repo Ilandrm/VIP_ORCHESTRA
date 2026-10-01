@@ -1,22 +1,34 @@
 <template>
-  <div class="px-6 py-24 md:py-32">
-    <h2 class="text-center text-2xl font-semibold uppercase tracking-widest text-text md:text-3xl">Contact Us</h2>
-
-    <div class="mx-auto mt-16 grid max-w-5xl gap-16 md:grid-cols-2">
-      <ContactForm @submit="handleSubmit" />
-
-      <div class="flex flex-col gap-4 text-sm uppercase tracking-widest text-text/80">
-        <a href="mailto:info@inspiration-music.com" class="transition-colors duration-300 hover:text-accent">
-          contact@vip-orchestra.com
-        </a>
-        <p>+33(0)6 63 10 93 86 / +33(0)1 44 70 71 99</p>
-        <p>132 Rue Marius Aufan, 92300 Levallois-Perret</p>
+  <div>
+    <section class="relative h-[60vh] w-full overflow-hidden">
+      <img
+        :src="withBaseUrl('/img_site_vip/IMG_6745.jpeg')"
+        alt="Contact us"
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-bg/40" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <h1 class="sign text-6xl leading-tight text-white md:text-8xl">Contact us</h1>
       </div>
-    </div>
+    </section>
 
-    <p v-if="isConfirmed" class="mt-10 text-center text-sm uppercase tracking-widest text-accent">
-      Merci, votre demande a bien été envoyée. Notre équipe vous recontactera rapidement.
-    </p>
+    <div class="px-6 py-24 md:py-32">
+      <div class="mx-auto mt-16 grid max-w-5xl gap-16 md:grid-cols-2">
+        <ContactForm @submit="handleSubmit" />
+
+        <div class="flex flex-col gap-4 text-sm uppercase tracking-widest text-text/80">
+          <a href="mailto:info@inspiration-music.com" class="transition-colors duration-300 hover:text-accent">
+            contact@vip-orchestra.com
+          </a>
+          <p>+33(0)6 63 10 93 86 / +33(0)1 44 70 71 99</p>
+          <p>132 Rue Marius Aufan, 92300 Levallois-Perret</p>
+        </div>
+      </div>
+
+      <p v-if="isConfirmed" class="mt-10 text-center text-sm uppercase tracking-widest text-accent">
+        Merci, votre demande a bien été envoyée. Notre équipe vous recontactera rapidement.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -35,3 +47,8 @@ useSeoMeta({
   description: 'Get in touch with Vip Orchestra for your wedding, corporate or special event.'
 })
 </script>
+<style>
+.sign {
+  font-family: 'Brittany Signature', cursive;
+}
+</style>

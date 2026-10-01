@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HeroSliderVideo :slides="heroSlides">
+    <VideoBackground src="videos/event_video.mp4" >
       <template #scroll-indicator>
         <ScrollIndicator />
       </template>
-    </HeroSliderVideo>
+    </VideoBackground>
 
     <VideoMosaic subtitle="FROM THE FIRST NOTE TO THE LAST DANCE" :videos="projects">
       <template #title>
@@ -17,7 +17,7 @@
     <ProjectsGrid subtitle="POUR TOUS VOS EVENEMENTS" :projects="projectsInGrid" size="3">
     </ProjectsGrid>
 
-    <LogoVideoSection title="ILS NOUS FONT CONFIANCE" :src="withBaseUrl('/videos/logo-wedding.mp4')" :logos="brandLogos"/>
+    <LogoVideoSection title="Ils nous font confiance" :src="withBaseUrl('/videos/logo-wedding.mp4')" :logos="brandLogos"/>
 
     <ClientsShowcase title=" Fais de ta vie un rêve, et d'un rêve une réalité" :clients="clients" />
 
@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import HeroSliderVideo, { type HeroSlide } from '~/components/media/HeroSliderVideo.vue'
+import VideoBackground from '~/components/media/VideoBackground.vue'
 import ScrollIndicator from '~/components/ui/ScrollIndicator.vue'
 import VideoMosaic from '~/components/sections/VideoMosaic.vue'
 import ProjectsGrid, { type Project } from '~/components/sections/ProjectsGrid.vue'
@@ -50,22 +50,16 @@ const brandLogos: string[] = [
   '/brand/collectionneur.png'
 
 ].map(withBaseUrl)
-const heroSlides: HeroSlide[] = [
-  { id: 'slide-1', type: 'image', image: withBaseUrl('/images/slide0.jpeg') },
-  { id: 'slide-2', type: 'image', image: withBaseUrl('/images/slide1.jpg') },
-  { id: 'slide-3', type: 'image', image: withBaseUrl('/images/slide2.jpg') },
-  { id: 'slide-4', type: 'image', image: withBaseUrl('/images/slide3.jpg') },
-  { id: 'slide-5', type: 'image', image: withBaseUrl('/images/slide4.jpg') }
-]
 
 const projects: Project[] = [
-  { title: 'Ceremony', poster: withBaseUrl('/images/ErikaEli-1679-768x768.jpg') },
-  { title: 'Cocktail', poster: withBaseUrl('/images/David-Marmier-22-scaled.jpg') },
-  { title: 'Dinner', poster: withBaseUrl('/images/VIP-ORCHESTRA-_-WEDDINGS-0440-scaled.jpeg') },
-  { title: 'Party', poster: withBaseUrl('/images/IMG_2676-scaled.jpg') }
+  { title: 'Ceremony', poster: withBaseUrl('/img_site_vip/IMG_6725.jpeg') },
+  { title: 'Cocktail', poster: withBaseUrl('/img_site_vip/IMG_6729.jpeg') },
+  { title: 'Dinner', poster: withBaseUrl('/img_site_vip/IMG_6735.jpeg') },
+  { title: 'Party', poster: withBaseUrl('/img_site_vip/IMG_6743.jpeg') }
 ]
 const projectsInGrid: Project[] = [
-  { title: 'ÉVÈNEMENTIEL', poster: withBaseUrl('/images/elena-de-soto-w423NnHFjFg-unsplash-768x768.jpg') },
+  { title: 'MARIAGE', poster: withBaseUrl('/images/elena-de-soto-w423NnHFjFg-unsplash-768x768.jpg') },
+  { title: 'CEREMONIE', poster: withBaseUrl('/img_site_vip/IMG_6739.jpeg') },
   { title: 'CORPORATE', poster: withBaseUrl('/images/britt-gaiser-hSAlu33padA-unsplash-768x768.jpg') },
   { title: 'RÉCEPTION PRIVÉE', poster: withBaseUrl('/images/chuttersnap-aEnH4hJ_Mrs-unsplash-768x768.jpg') }
 ]

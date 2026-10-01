@@ -4,7 +4,7 @@
       <h3 class="text-3xl  tracking-wide md:text-5xl sign">
         <slot name="title" />
       </h3>
-      <h4 class="mt-10 text-sm uppercase tracking-widest text-text/70 md:text-2xl">
+      <h4 class="font-playfair-italic mt-10 text-sm uppercase tracking-widest text-text/70 md:text-2xl">
         {{ subtitle }}
       </h4>
     </div>
@@ -39,10 +39,10 @@ const props = withDefaults(defineProps<ProjectsGridProps>(), {
   size: 4,
 })
 
-const sizeForThree = 'mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
-const sizeForFour = 'mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'
+const sizeForThree = 'mx-auto grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
+const sizeForFour = 'mx-auto grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'
 
-const gridClass = computed(() => (props.size === '3' ? sizeForThree : sizeForFour))
+const gridClass = computed(() => (props.size === 3 ? sizeForThree : sizeForFour))
 </script>
 <style>
 .sign{

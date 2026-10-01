@@ -1,5 +1,15 @@
 <template>
-  <footer class="border-t border-text/10 bg-bg px-6 py-16 text-center md:px-10 md:py-24">
+  <div>
+    <section class="bg-bg px-6 pb-16 pt-20 md:px-10 md:pb-20 md:pt-24">
+      <h2 class="text-center text-3xl tracking-wide md:text-5xl sign">Follow us on Instagram</h2>
+      <p class="font-playfair-italic mt-8 text-center text-sm text-text/60 md:text-base">
+        Un aperçu de nos plus beaux moments...
+      </p>
+      <div class="mx-auto mt-10 max-w-5xl">
+        <InstagramFeed :limit="9" />
+      </div>
+    </section>
+    <footer class="border-t border-text/10 bg-bg px-6 py-16 text-center md:px-10 md:py-24">
     <h2 class="text-2xl font-semibold uppercase tracking-widest text-text">Follow Us</h2>
 
     <ul class="mt-8 flex items-center justify-center gap-6">
@@ -23,10 +33,13 @@
       -
       <NuxtLink to="/privacy-policy" class="transition-colors duration-300 hover:text-accent">Privacy Policy</NuxtLink>
     </p>
-  </footer>
+    </footer>
+  </div>
 </template>
 
 <script setup lang="ts">
+import InstagramFeed from '~/components/media/InstagramFeed.vue'
+
 const socialLinks = [
   { name: 'Instagram', href: 'https://www.instagram.com/vip_orchestra/', icon: withBaseUrl('/images/instagram.svg') },
   { name: 'TikTok', href: 'https://www.tiktok.com/@vip.orchestra?lang=fr', icon: withBaseUrl('/images/tiktok.svg') },
@@ -37,5 +50,8 @@ const socialLinks = [
 <style>
 .white-filter {
   filter: invert(1);
+}
+.sign {
+  font-family: 'Brittany Signature', cursive;
 }
 </style>

@@ -6,7 +6,7 @@
   --color-bg: #000000;
   --color-text: #ffffff;
   --color-accent: #cd2653;
-  --font-main: 'Poppins', sans-serif;
+  --font-main: 'Avenir', serif;
 }
 
 html {
@@ -29,4 +29,36 @@ a {
   src: url('assets/fonts/BrittanySignature.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('assets/fonts/Avenir-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+.font-playfair-italic {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+.sign{
+  font-family: 'Brittany Signature', cursive;
+}
+.text-gold {
+  color: #bca45d;
 }

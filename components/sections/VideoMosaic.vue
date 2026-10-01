@@ -4,7 +4,7 @@
       <h3 class="text-3xl tracking-wide md:text-5xl sign">
         <slot name="title" />
       </h3>
-      <h4 class="mt-10 text-sm uppercase tracking-widest text-text/70 md:text-2xl">
+      <h4 class="font-playfair-italic mt-10 text-sm uppercase tracking-widest text-text/70 md:text-2xl">
         {{ subtitle }}
       </h4>
     </div>

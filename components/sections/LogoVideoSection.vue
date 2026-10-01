@@ -1,6 +1,6 @@
 <template>
   <section class="wrap-talk bg-bg px-6 py-8 text-center md:py-16">
-    <h2 class="center text-2xl tracking-wide md:text-5xl text-gold">{{ title }}</h2>
+    <h2 class="center text-2xl tracking-wide md:text-5xl text-gold sign">{{ title }}</h2>
     <div class="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-8 md:gap-10">
       <div
           v-for="logo in logos"

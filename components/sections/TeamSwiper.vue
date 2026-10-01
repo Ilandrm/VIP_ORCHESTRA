@@ -1,16 +1,11 @@
 <template>
   <div class="relative mx-auto w-full max-w-6xl px-6">
-    <Swiper
-      :modules="[Navigation]"
-      :slides-per-view="2"
-      :space-between="24"
-      :loop="true"
-      :breakpoints="breakpoints"
-      :navigation="{ prevEl: prevButton, nextEl: nextButton }"
-      class="team-swiper"
-      @swiper="onSwiperReady"
-    >
-      <SwiperSlide v-for="member in members" :key="member.name">
+    <div class="team-grid">
+      <div
+        v-for="(member, index) in members"
+        :key="member.name"
+        :class="offsetClass(index)"
+      >
         <button
           type="button"
           class="group flex w-full flex-col items-center gap-4 text-center"
@@ -22,42 +17,22 @@
               :alt="member.name"
               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
+            <span
+              class="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-xs uppercase tracking-widest text-accent">{{ member.role }}</span>
+            </span>
           </span>
           <span class="flex flex-col gap-1">
             <span class="text-sm font-semibold uppercase tracking-widest text-text">{{ member.name }}</span>
-            <span class="text-xs uppercase tracking-widest text-accent">{{ member.role }}</span>
           </span>
         </button>
-      </SwiperSlide>
-    </Swiper>
-
-    <button
-      ref="prevButton"
-      type="button"
-      aria-label="Previous"
-      class="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-4 rounded-full border border-text/20 p-3 transition-colors duration-300 hover:border-accent md:-translate-x-8"
-    >
-      <img :src="withBaseUrl('/images/ico-left-arrow.svg')" alt="" class="h-4 w-4 white-filter" />
-    </button>
-    <button
-      ref="nextButton"
-      type="button"
-      aria-label="Next"
-      class="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 rounded-full border border-text/20 p-3 transition-colors duration-300 hover:border-accent md:translate-x-8"
-    >
-      <img :src="withBaseUrl('/images/ico-right-arrow.svg')" alt="" class="h-4 w-4 white-filter" />
-    </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation } from 'swiper/modules'
-import type { Swiper as SwiperInstance } from 'swiper/types'
-import 'swiper/css'
-import 'swiper/css/navigation'
-
 export interface TeamMember {
   name: string
   role: string
@@ -71,23 +46,40 @@ interface TeamSwiperProps {
 defineProps<TeamSwiperProps>()
 defineEmits<{ select: [member: TeamMember] }>()
 
-const prevButton = ref<HTMLButtonElement | null>(null)
-const nextButton = ref<HTMLButtonElement | null>(null)
+const offsets = [
+  'md:mt-0',
+  'md:mt-10',
+  'md:mt-4',
+  'md:mt-14',
+  'md:mt-2',
+  'md:mt-8',
+  'md:mt-12',
+  'md:mt-0',
+  'md:mt-6',
+  'md:mt-10',
+  'md:mt-2',
+  'md:mt-8'
+]
 
-const breakpoints = {
-  320: { slidesPerView: 2 },
-  768: { slidesPerView: 3 },
-  1024: { slidesPerView: 3 },
-  1280: { slidesPerView: 4 }
+const offsetClass = (index: number) => offsets[index % offsets.length]
+</script>
+
+<style scoped>
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-const onSwiperReady = (swiper: SwiperInstance) => {
-  if (typeof swiper.params.navigation === 'object') {
-    swiper.params.navigation.prevEl = prevButton.value
-    swiper.params.navigation.nextEl = nextButton.value
-    swiper.navigation.destroy()
-    swiper.navigation.init()
-    swiper.navigation.update()
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-</script>
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>
