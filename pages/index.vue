@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VideoBackground src="/videos/home.mp4" :poster="withBaseUrl('/images/poster-black.jpg')">
+    <VideoBackground src="/videos/home.mp4">
       <div class="flex h-full flex-col items-center justify-center px-6 text-center">
       </div>
     </VideoBackground>

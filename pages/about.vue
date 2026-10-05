@@ -52,9 +52,9 @@ import AppButton from '~/components/ui/AppButton.vue'
 import VideoBackground from '~/components/media/VideoBackground.vue'
 
 useSeoMeta({
-  title: 'Vip Orchestra - Corporate',
+  title: 'À propos – VIP Orchestra',
   description:
-    'We understand the importance of making a true professional impact that creates memorable memories with your employees and guests.'
+    "Découvrez VIP Orchestra, l'orchestre d'exception pour vos soirées privées et événements : remix du DJ, medley de l'orchestre complet et shows uniques pensés pour vous."
 })
 </script>
 <style>

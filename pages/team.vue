@@ -92,8 +92,9 @@ const handleCloseModal = () => {
 }
 
 useSeoMeta({
-  title: 'Vip Orchestra - Our Story',
-  description: 'Vip Orchestra redefines live entertainment at the highest level, merging visionary artistry with unmatched excellence.'
+  title: 'Notre équipe – VIP Orchestra',
+  description:
+    "Rencontrez l'équipe de VIP Orchestra : directeur artistique, chanteurs, musiciens, DJ et event planners qui font de chaque événement un moment unique."
 })
 </script>
 <style>

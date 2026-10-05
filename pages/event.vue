@@ -87,9 +87,9 @@ const clients: string[] = [
 ]
 
 useSeoMeta({
-  title: 'Vip Orchestra - evenement',
+  title: 'Mariages & événements – VIP Orchestra',
   description:
-    '"Music is the universal language of celebration and love" It reveals the beauty and uniqueness of your Love Story. Live music band for luxury events.'
+    "Mariages, cérémonies, réceptions privées et événements d'entreprise : VIP Orchestra crée des instants uniques, de la première note à la dernière danse."
 })
 </script>
 <style>

@@ -35,7 +35,8 @@ const sections: LegalSection[] = [
 ]
 
 useSeoMeta({
-  title: 'Legal Notice - Vip Orchestra',
-  description: 'Legal notice and publisher information for the Vip Orchestra website.'
+  title: 'Mentions légales – VIP Orchestra',
+  description:
+    "Mentions légales et informations sur l'éditeur du site VIP Orchestra."
 })
 </script>

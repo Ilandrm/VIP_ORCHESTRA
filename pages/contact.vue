@@ -43,8 +43,9 @@ const handleSubmit = () => {
 }
 
 useSeoMeta({
-  title: 'Vip Orchestra - Contact',
-  description: 'Get in touch with Vip Orchestra for your wedding, corporate or special event.'
+  title: 'Contactez-nous – VIP Orchestra',
+  description:
+    "Contactez VIP Orchestra pour vos mariages, événements d'entreprise ou soirées privées. Notre équipe vous répond rapidement."
 })
 </script>
 <style>

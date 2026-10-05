@@ -65,7 +65,8 @@ const sections: LegalSection[] = [
 ]
 
 useSeoMeta({
-  title: 'Privacy Policy - Vip Orchestra',
-  description: 'How Vip Orchestra collects, uses, and protects your personal data in compliance with GDPR.'
+  title: 'Politique de confidentialité – VIP Orchestra',
+  description:
+    "Politique de confidentialité de VIP Orchestra : collecte, utilisation et protection de vos données personnelles, conformément au RGPD."
 })
 </script>
