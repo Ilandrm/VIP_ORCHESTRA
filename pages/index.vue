@@ -7,37 +7,39 @@
 
     <section class=" px-6 py-24 text-stone-50 md:px-10">
       <div class="mx-auto grid max-w-6xl items-start gap-12 md:grid-cols-2">
-        <p class=" sign text-left text-5xl leading-tight text-white md:text-6xl">
-          Your event, our vision
+        <p class=" sign text-left text-4xl leading-tight text-white md:text-5xl">
+          Your event, our rhythm
         </p>
         <br/>
         <div>
-          <p class="font-playfair-italic text-2xl text-stone-300 md:text-3xl">Not quite a cocktail bar.</p>
+          <p class="font-playfair-italic text-2xl text-stone-300 md:text-3xl">Not quite a concert.</p>
           <p class="font-playfair-italic mt-1 text-2xl text-white md:text-3xl">
             Not quite
             <span class="relative inline-block px-2">
-              a cantina.
+              a party.
               <svg class="absolute -inset-2 h-[calc(100%+1rem)] w-[calc(100%+1rem)]" viewBox="0 0 200 60" preserveAspectRatio="none">
                 <ellipse cx="100" cy="30" rx="98" ry="28" fill="none" stroke="white" stroke-width="1.5" />
               </svg>
             </span>
+            <p class="font-playfair-italic text-2xl text-stone-300 md:text-3xl">Definitely a VIP experience.</p>
+
           </p>
 
           <div class="mt-12 max-w-prose space-y-6">
             <p class="leading-relaxed text-stone-300">
-              We serve northern-style lunches with attitude and pour drinks that taste better when the city lights come on.
+              VIP Orchestra transforme chaque événement en un moment qui se vit autant qu’il s’écoute.
             </p>
             <p class="leading-relaxed text-stone-300">
-              Tucked somewhere between the chaos of CDMX and a really good playlist, this is where slow lunches turn into long nights and nobody rushes the bill.
+              Des premières notes aux dernières heures de la nuit, nos artistes créent une expérience live pensée autour de vous, de votre public et de l’énergie de chaque instant.
             </p>
           </div>
         </div>
 
         <div class="flex justify-start md:justify-end">
           <p class="text-left text-2xl leading-tight text-white md:text-right md:text-3xl">
-            STORIES START HERE.
+            YOU BRING THE PEOPLE.
             <br />
-            <span class="text-stone-400">SOME EVEN END WELL.</span>
+            <span class="text-stone-400">WE MAKE IT UNFORGETTABLE.</span>
           </p>
         </div>
       </div>
