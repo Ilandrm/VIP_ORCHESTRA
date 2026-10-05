@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VideoBackground src="/videos/home.mp4">
+    <VideoBackground src="videos/home.mp4">
       <div class="flex h-full flex-col items-center justify-center px-6 text-center">
       </div>
     </VideoBackground>
@@ -47,29 +47,35 @@
       <div class="mx-auto max-w-6xl">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-2">
           <div class="md:contents">
-            <img
-                :src="withBaseUrl('/img_site_vip/IMG_6738.jpeg')"
-                alt="VIP Orchestra"
-                class="h-64 w-full object-cover md:h-96"
-            />
+            <NuxtLink to="/event" class="block">
+              <img
+                  :src="withBaseUrl('/img_site_vip/IMG_6738.jpeg')"
+                  alt="VIP Orchestra"
+                  class="h-64 w-full object-cover transition-opacity hover:opacity-90 md:h-96"
+              />
+            </NuxtLink>
             <NuxtLink to="/event" class="text-gold font-playfair transition-colors hover:text-stone-300 text-center md:hidden text-sm">EVENT</NuxtLink>
           </div>
 
           <div class="md:contents">
-            <img
-                :src="withBaseUrl('/img_site_vip/IMG_6741.jpeg')"
-                alt="VIP Orchestra"
-                class="h-64 w-full object-cover md:h-96"
-            />
+            <NuxtLink to="/about" class="block">
+              <img
+                  :src="withBaseUrl('/img_site_vip/IMG_6741.jpeg')"
+                  alt="VIP Orchestra"
+                  class="h-64 w-full object-cover transition-opacity hover:opacity-90 md:h-96"
+              />
+            </NuxtLink>
             <NuxtLink to="/about" class="text-gold font-playfair transition-colors hover:text-stone-300 text-center md:hidden text-sm">US</NuxtLink>
           </div>
 
           <div class="md:contents">
-            <img
-                :src="withBaseUrl('/img_site_vip/IMG_6746.jpeg')"
-                alt="VIP Orchestra"
-                class="h-64 w-full object-cover md:h-96"
-            />
+            <NuxtLink to="/team" class="block">
+              <img
+                  :src="withBaseUrl('/img_site_vip/IMG_6746.jpeg')"
+                  alt="VIP Orchestra"
+                  class="h-64 w-full object-cover transition-opacity hover:opacity-90 md:h-96"
+              />
+            </NuxtLink>
             <NuxtLink to="/team" class="text-gold font-playfair transition-colors hover:text-stone-300 text-center md:hidden text-sm">TEAM</NuxtLink>
           </div>
         </div>
