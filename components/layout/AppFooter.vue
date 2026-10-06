@@ -5,8 +5,13 @@
       <p class="font-playfair-italic mt-8 text-center text-sm text-text/60 md:text-base">
         Un aperçu de nos plus beaux moments...
       </p>
-      <div class="mx-auto mt-10 max-w-5xl">
-        <InstagramFeed :limit="9" />
+      <div class="w-full mt-10 max-w-5xl mx-auto flex items-center justify-center">
+        <!-- <InstagramFeed :limit="9" /> -->
+        <img
+            :src="withBaseUrl('/images/insta_test.jpeg')"
+            alt="VIP Orchestra"
+            class="w-6/12 object-cover transition-opacity hover:opacity-90"
+        />
       </div>
     </section>
     <footer class="border-t border-text/10 bg-bg px-6 py-16 text-center md:px-10 md:py-24">

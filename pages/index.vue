@@ -7,7 +7,7 @@
 
     <section class=" px-6 py-24 text-stone-50 md:px-10">
       <div class="mx-auto grid max-w-6xl items-start gap-12 md:grid-cols-2">
-        <p class=" sign text-left text-4xl leading-tight text-white md:text-5xl">
+        <p class=" sign text-left text-4xl leading-tight text-white md:text-6xl">
           Your event, our rhythm
         </p>
         <br/>
@@ -21,9 +21,8 @@
                 <ellipse cx="100" cy="30" rx="98" ry="28" fill="none" stroke="white" stroke-width="1.5" />
               </svg>
             </span>
-            <p class="font-playfair-italic text-2xl text-stone-300 md:text-3xl">Definitely a VIP experience.</p>
-
           </p>
+          <p class="font-playfair-italic text-2xl text-stone-300 md:text-3xl">Definitely a VIP experience.</p>
 
           <div class="mt-12 max-w-prose space-y-6">
             <p class="leading-relaxed text-stone-300">
