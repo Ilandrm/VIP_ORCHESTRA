@@ -3,13 +3,13 @@
     class="fixed inset-x-0 top-0 z-50 transition-colors duration-500"
     :class="isMenuOpen ? 'bg-bg' : 'bg-bg/80 backdrop-blur'"
   >
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
-      <NuxtLink to="/" class="flex items-center" @click="handleNavClick">
-        <img :src="withBaseUrl('/images/logo.png')" alt="VIP" class="h-16 w-16 md:h-20 md:w-20 white-filter" />
+    <div class="relative mx-auto flex max-w-7xl items-center justify-end px-6 py-6 md:justify-center md:px-10 md:py-7">
+      <NuxtLink v-if="route.path !== '/'" to="/" class="absolute left-6 top-1/2 -translate-y-1/2 md:left-10" @click="handleNavClick">
+        <img :src="withBaseUrl('/images/logo.png')" alt="VIP" class="white-filter h-12 w-12 md:h-14 md:w-14" />
       </NuxtLink>
 
       <nav class="hidden md:block">
-        <ul class="flex items-center justify-center gap-10 text-sm uppercase tracking-widest text-text">
+        <ul class="flex items-center justify-center gap-12 text-xs font-light uppercase tracking-[0.3em] text-text">
           <li v-for="link in navLinks" :key="link.to">
             <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
               {{ link.label }}
@@ -20,28 +20,25 @@
 
       <button
         type="button"
-        class="flex flex-col items-end gap-2 text-text md:hidden"
+        class="relative z-50 flex h-8 items-center gap-3 text-text md:hidden"
         :aria-expanded="isMenuOpen"
         aria-label="Menu"
         @click="toggleMenu"
       >
-        <span class="text-xs uppercase tracking-widest">{{ isMenuOpen ? 'Close' : 'Menu' }}</span>
-        <span class="flex h-4 w-8 flex-col justify-between">
-          <span
-            class="h-px w-full bg-text transition-transform duration-300"
-            :class="isMenuOpen ? 'translate-y-[7px] rotate-45' : ''"
-          />
-          <span
-            class="h-px w-full bg-text transition-transform duration-300"
-            :class="isMenuOpen ? '-translate-y-[7px] -rotate-45' : ''"
-          />
+        <span v-if="!isMenuOpen" class="text-xs font-light uppercase tracking-[0.3em]">Menu</span>
+        <svg v-if="isMenuOpen" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M4 4l16 16M20 4L4 20" />
+        </svg>
+        <span v-else class="flex h-3 w-7 flex-col justify-between">
+          <span class="h-px w-full bg-text" />
+          <span class="h-px w-full bg-text" />
         </span>
       </button>
     </div>
 
     <Transition name="menu-fade">
       <div v-if="isMenuOpen" class="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-bg">
-        <ul class="flex flex-col items-center gap-8 text-2xl uppercase tracking-widest text-text">
+        <ul class="flex flex-col items-center gap-8 text-xl font-light uppercase tracking-[0.3em] text-text">
           <li v-for="link in navLinks" :key="link.to">
             <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
               {{ link.label }}
@@ -58,12 +55,14 @@ import { ref, watch } from 'vue'
 import { useBodyScrollLock } from '~/composables/useBodyScrollLock'
 
 const navLinks = [
-  { label: 'Event', to: '/event' },
+  { label: 'Private', to: '/private' },
+  { label: 'Corporate', to: '/corporate' },
+  { label: 'Residence', to: '/residence' },
   { label: 'About us', to: '/about' },
-  { label: 'Team', to: '/team' },
   { label: 'Contact', to: '/contact' }
 ]
 
+const route = useRoute()
 const isMenuOpen = ref(false)
 const { lock, unlock } = useBodyScrollLock()
 

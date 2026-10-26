@@ -1,28 +1,51 @@
 <template>
-  <section class="wrap-talk bg-bg px-6 py-8 text-center md:py-16">
-    <h2 class="center text-2xl tracking-wide md:text-5xl text-gold sign">{{ title }}</h2>
-    <div class="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-8 md:gap-10">
-      <div
-          v-for="logo in logos"
-          :key="logo"
-          class="flex w-[calc(50%-1rem)] items-center justify-center opacity-70 transition duration-300 hover:opacity-100 sm:w-[calc(33.333%-1.5rem)] md:w-[calc(25%-1.9rem)]"
-      >
-        <img :src="logo" alt="" class="h-12 w-auto max-w-[100px] object-contain md:h-16 md:max-w-[120px]" />
-      </div>
+  <section class="bg-bg px-6 py-2 text-center md:py-4">
+    <h2 class="sign text-3xl tracking-wide text-gold md:text-5xl">{{ title }}</h2>
+    <div class="relative mx-auto mt-6 h-28 w-full max-w-[14rem] md:h-40 md:max-w-xs">
+      <Transition name="logo-fade" mode="out-in">
+        <img
+          :key="current"
+          :src="logos[current]"
+          alt=""
+          class="absolute inset-0 h-full w-full object-contain"
+        />
+      </Transition>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
 interface LogoVideoSectionProps {
   title: string
   logos: string[]
 }
 
-defineProps<LogoVideoSectionProps>()
+const props = defineProps<LogoVideoSectionProps>()
+
+const current = ref(0)
+let timer: ReturnType<typeof setInterval> | undefined
+
+onMounted(() => {
+  timer = setInterval(() => {
+    current.value = (current.value + 1) % props.logos.length
+  }, 2500)
+})
+
+onBeforeUnmount(() => {
+  if (timer) clearInterval(timer)
+})
 </script>
-<style>
-.sign{
-  font-family: 'Brittany Signature', cursive;
+
+<style scoped>
+.logo-fade-enter-active,
+.logo-fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+
+.logo-fade-enter-from,
+.logo-fade-leave-to {
+  opacity: 0;
 }
 </style>

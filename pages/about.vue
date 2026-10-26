@@ -1,67 +1,28 @@
 <template>
-  <div>
-    <VideoBackground src="videos/about_video.mp4" >
-      <template #scroll-indicator>
-        <ScrollIndicator />
-      </template>
-    </VideoBackground>
-
-    <section class="px-6 py-20 md:px-10 md:py-28">
-      <span class="mx-auto mt-14 block w-[70%] text-center text-sm leading-loose tracking-wide text-text/90 md:text-base">
-        C'est depuis sa jeune création que l'étoile montante des orchestres, VIP Orchestra, a su donner un nouveau souffle au rêve Musical . Basé sur un concept innovant, rempli de talents les plus convoités de la thunder coins hold and winCapitale, VIP Orchestra s'invite dans les soirées privées les plus prisées. Passant par les remix du DJ, aux medley de l'Orchestre complet, le groupe met en oeuvre son savoir faire pour répondre aux demandes les plus exigeantes
-      </span>
-      <h3 class="sign mt-16 text-center text-4xl tracking-wide text-gold md:text-6xl">
-        Nos services
-      </h3>
-      <p class="font-playfair-italic mx-auto mt-6 max-w-3xl text-center text-lg text-text/60 md:text-xl">
-        — des instants uniques, pensés pour vous —
-      </p>
-      <span class="mx-auto mt-14 block w-[70%] text-center text-sm leading-loose tracking-wide text-text/90 md:text-base">
-        Notre équipe vous conseille et vous accompagne tout au long de la préparation et de l'exécution de votre événement, à votre disposition pour faire évoluer, en toute réactivité..
-
-Passant par les remix du DJ, aux medley de l'Orchestre complet, le groupe met en oeuvre son savoir faire pour répondre aux demandes les plus exigeantes qu'elles soient. Des shows uniques constamment repris et modernisés pour un instant sensationnel.
-      </span>
-    </section>
-
-    <section class="px-6 pb-24 md:px-10">
-      <NuxtLink to="/team" class="group mx-auto block max-w-5xl overflow-hidden">
-        <div class="relative">
-          <img
-            :src="withBaseUrl('/img_site_vip/IMG_6725.jpeg')"
-            alt="Découvrir nos artistes"
-            class="opacity-75 grayscale h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-[28rem]"
-          />
-          <div class="absolute inset-0 flex flex-col items-center justify-center bg-bg/40 transition-colors duration-500 group-hover:bg-bg/20">
-            <h2 class="sign text-center text-5xl text-white md:text-7xl ">Découvrir nos artistes</h2>
-
-          </div>
-        </div>
-      </NuxtLink>
-    </section>
-
-    <InstagramFeed :limit="9" />
-    <section class="px-6 py-16 text-center md:py-24">
-      <AppButton to="/contact" label="Contact us" variant="primary" class="inline-flex" />
-    </section>
-  </div>
+  <section class="px-6 py-16 text-center md:px-10 md:py-24">
+    <h1 class="sign mx-auto max-w-4xl text-4xl leading-tight tracking-wide text-gold md:text-6xl">
+      More than music, an experience.
+    </h1>
+    <div class="mx-auto mt-16 max-w-3xl space-y-8 text-sm leading-loose tracking-wide text-text/90 md:text-base">
+      <p v-for="paragraph in paragraphs" :key="paragraph">{{ paragraph }}</p>
+      <p class="font-playfair-italic text-lg text-text md:text-xl">One stage. Endless energy. Unforgettable moments.</p>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-import ScrollIndicator from '~/components/ui/ScrollIndicator.vue'
-import AppButton from '~/components/ui/AppButton.vue'
-import VideoBackground from '~/components/media/VideoBackground.vue'
+const paragraphs: string[] = [
+  'VIP Orchestra reimagines luxury entertainment, bringing together artistic creativity, musical excellence and a passion for extraordinary experiences.',
+  'Founded and led by Joseph, Artistic Director, and Jonathan, Technical Director, VIP Orchestra was born from a shared vision: to transform every event into a unique and unforgettable celebration, where music, emotion and creativity come together.',
+  'More than a live orchestra, VIP is a creative entertainment and event production company, designing fully bespoke experiences for prestigious weddings, exclusive private celebrations and corporate events around the world.',
+  'From timeless classics to the latest international hits, our musical universe knows no boundaries. Combining exceptional live performers, contemporary arrangements and innovative artistic concepts, we create dynamic performances that transcend genres, cultures and generations.',
+  'Every event is a new story to tell.',
+  'From the first creative ideas to the final performance, our team works closely with each client to bring their vision to life, offering a seamless, tailor-made experience. With our own sound, lighting and visual production capabilities, we oversee every detail to ensure complete artistic and technical harmony.',
+  "With over a decade of experience and performances across the world's most exclusive destinations, VIP Orchestra continues to push the boundaries of live entertainment, driven by creativity, passion and the belief that every celebration deserves to be extraordinary."
+]
 
 useSeoMeta({
-  title: 'À propos – VIP Orchestra',
-  description:
-    "Découvrez VIP Orchestra, l'orchestre d'exception pour vos soirées privées et événements : remix du DJ, medley de l'orchestre complet et shows uniques pensés pour vous."
+  title: 'About us – VIP Orchestra',
+  description: 'More than music, an experience. Discover VIP Orchestra, a creative entertainment and event production company.'
 })
 </script>
-<style>
-.sign{
-  font-family: 'Brittany Signature', cursive;
-}
-.text-gold {
-  color: #bca45d;
-}
-</style>

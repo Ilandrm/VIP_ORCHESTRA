@@ -1,34 +1,38 @@
 <template>
   <div>
-    <section class="relative h-[60vh] w-full overflow-hidden">
-      <img
-        :src="withBaseUrl('/img_site_vip/IMG_6745.jpeg')"
-        alt="Contact us"
-        class="h-full w-full object-cover"
-      />
+    <section class="relative h-[50vh] w-full overflow-hidden">
+      <img :src="withBaseUrl('/img_site_vip/IMG_6745.jpeg')" alt="Contact us" class="h-full w-full object-cover" />
       <div class="absolute inset-0 bg-bg/40" />
-      <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-        <h1 class="sign text-6xl leading-tight text-white md:text-8xl">Contact us</h1>
-      </div>
     </section>
 
-    <div class="px-6 py-24 md:py-32">
-      <div class="mx-auto mt-16 grid max-w-5xl gap-16 md:grid-cols-2">
-        <ContactForm @submit="handleSubmit" />
+    <div class="px-6 py-16 text-center md:py-24">
+      <h1 class="sign text-5xl leading-tight text-white md:text-7xl">Contact Us</h1>
 
-        <div class="flex flex-col gap-4 text-sm uppercase tracking-widest text-text/80">
-          <a href="mailto:info@inspiration-music.com" class="transition-colors duration-300 hover:text-accent">
-            contact@vip-orchestra.com
-          </a>
-          <p>+33(0)6 63 10 93 86 / +33(0)1 44 70 71 99</p>
-          <p>132 Rue Marius Aufan, 92300 Levallois-Perret</p>
-        </div>
+      <div class="mt-12 flex flex-col items-center gap-3 text-xs font-light uppercase tracking-[0.3em] text-text/80 md:text-sm">
+        <a href="mailto:contact@vip-orchestra.com" class="transition-colors duration-300 hover:text-accent">
+          contact@vip-orchestra.com
+        </a>
+        <a href="tel:+33663109386" class="transition-colors duration-300 hover:text-accent">+33 (0)6 63 10 93 86</a>
+        <p>132 Rue Marius Aufan, 92300 Levallois-Perret</p>
       </div>
 
-      <p v-if="isConfirmed" class="mt-10 text-center text-sm uppercase tracking-widest text-accent">
-        Merci, votre demande a bien été envoyée. Notre équipe vous recontactera rapidement.
+      <div class="mt-16">
+        <ContactForm @submit="handleSubmit" />
+      </div>
+
+      <p v-if="isConfirmed" class="mt-10 text-sm uppercase tracking-widest text-accent">
+        Thank you, your request has been sent. Our team will get back to you shortly.
       </p>
     </div>
+
+    <section class="px-6 pb-16 text-center md:px-10">
+      <h2 class="sign text-3xl tracking-wide md:text-5xl">Follow us on Instagram</h2>
+      <div class="mx-auto mt-10 flex max-w-5xl items-center justify-center">
+        <a href="https://www.instagram.com/vip_orchestra/" target="_blank" rel="noopener noreferrer" class="block w-full md:w-8/12">
+          <img :src="withBaseUrl('/images/insta_test.jpeg')" alt="VIP Orchestra on Instagram" class="w-full object-cover transition-opacity hover:opacity-90" />
+        </a>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -43,13 +47,7 @@ const handleSubmit = () => {
 }
 
 useSeoMeta({
-  title: 'Contactez-nous – VIP Orchestra',
-  description:
-    "Contactez VIP Orchestra pour vos mariages, événements d'entreprise ou soirées privées. Notre équipe vous répond rapidement."
+  title: 'Contact us – VIP Orchestra',
+  description: 'Contact VIP Orchestra for your weddings, corporate events or private parties.'
 })
 </script>
-<style>
-.sign {
-  font-family: 'Brittany Signature', cursive;
-}
-</style>

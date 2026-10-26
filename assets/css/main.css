@@ -18,6 +18,25 @@ body {
   color: var(--color-text);
   font-family: var(--font-main);
   overflow-x: hidden;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+main {
+  padding-top: 5.5rem;
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 a {
@@ -60,5 +79,5 @@ a {
   font-family: 'Brittany Signature', cursive;
 }
 .text-gold {
-  color: #bca45d;
+  color: var(--color-accent);
 }

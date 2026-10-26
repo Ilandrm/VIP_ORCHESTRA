@@ -1,94 +1,32 @@
 <template>
-  <form class="mx-auto flex w-full max-w-2xl flex-col gap-8" @submit.prevent="handleSubmit">
-    <fieldset class="flex flex-wrap gap-6">
-      <legend class="mb-3 text-sm uppercase tracking-widest text-text/70">Raison</legend>
-      <label v-for="reason in reasonOptions" :key="reason" class="flex items-center gap-2 text-sm text-text">
-        <input
-          v-model="formState.reason"
-          type="radio"
-          name="raison"
-          :value="reason"
-          required
-          class="accent-accent"
-          @click.stop
-        />
-        {{ reason }}
-      </label>
-    </fieldset>
-
-    <div class="grid gap-6 md:grid-cols-2">
-      <label class="flex flex-col gap-2 text-sm text-text">
-        Pays
-        <input v-model="formState.countryOfResidence" type="text" required class="input-field" />
-      </label>
-
-      <label class="flex flex-col gap-2 text-sm text-text">
-        Ville
-        <input v-model="formState.venueCountry" type="text" required class="input-field" />
-      </label>
-
-      <label class="flex flex-col gap-2 text-sm text-text">
-        Nom
-        <input v-model="formState.name" type="text" required class="input-field" />
-      </label>
-
-      <label class="flex flex-col gap-2 text-sm text-text">
-        E-mail
-        <input v-model="formState.email" type="email" required class="input-field" />
-      </label>
-    </div>
-
-    <div v-if="dynamicFields.length" class="grid gap-6 md:grid-cols-2">
+  <form class="mx-auto flex w-full max-w-xl flex-col gap-8" @submit.prevent="handleSubmit">
+    <div class="flex flex-wrap justify-center gap-8">
       <label
-        v-for="field in dynamicFields"
-        :key="field.key"
-        class="flex flex-col gap-2 text-sm text-text"
+        v-for="option in typeOptions"
+        :key="option"
+        class="flex cursor-pointer items-center gap-2 text-xs font-light uppercase tracking-[0.3em] text-text"
       >
-        {{ field.label }}
-        <input
-          v-model="formState[field.key]"
-          :type="field.type"
-          required
-          class="input-field"
-        />
+        <input v-model="formState.type" type="radio" name="type" :value="option" class="accent-accent" />
+        {{ option }}
       </label>
     </div>
 
-    <label class="flex flex-col gap-2 text-sm text-text">
-      Message
+    <label v-for="field in fields" :key="field.key" class="flex flex-col gap-2 text-xs font-light uppercase tracking-[0.3em] text-text">
+      {{ field.label }}
       <textarea
-        v-model="formState.message"
+        v-if="field.key === 'message'"
+        v-model="formState[field.key]"
         required
         maxlength="2000"
         rows="5"
         class="input-field resize-none"
       />
-      <span class="text-right text-xs text-text/50">{{ formState.message.length }}/2000</span>
+      <input v-else v-model="formState[field.key]" :type="field.type" required class="input-field" />
     </label>
 
-    <fieldset class="flex flex-col gap-3">
-      <input
-        v-model="formState.phone"
-        type="tel"
-        required
-        placeholder="Phone"
-        class="input-field"
-      />
-    </fieldset>
+    <AppButton type="submit" label="Send" variant="primary" class="self-center" />
 
-    <label class="flex flex-col gap-2 text-sm text-text">
-      Comment avez vous entendus parler de nous ?
-      <select v-model="formState.hearAboutUs" required class="input-field appearance-none">
-        <option value="" disabled hidden>Selectionner une option</option>
-        <option v-for="option in hearAboutUsOptions" :key="option" :value="option">{{ option }}</option>
-      </select>
-    </label>
-
-    <AppButton type="submit" label="Envoyer" variant="primary" class="self-start" />
-
-    <p v-if="isSubmitted" class="text-sm text-accent">
-      Votre message à bien été envoyé .
-    </p>
+    <p v-if="isSubmitted" class="text-center text-sm text-accent">Your message has been sent.</p>
   </form>
 </template>
 
@@ -96,79 +34,56 @@
 import { computed, reactive, ref } from 'vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
+type FieldKey = 'name' | 'email' | 'phone' | 'venue' | 'eventDate' | 'subject' | 'message'
+
 interface ContactFormState {
-  reason: string
-  countryOfResidence: string
-  venueCountry: string
+  type: string
   name: string
   email: string
-  message: string
-  wantsCallback: boolean
   phone: string
-  hearAboutUs: string
-  eventDate: string
-  eventType: string
-  guestCount: string
   venue: string
-  coupleNames: string
-  companyName: string
+  eventDate: string
+  subject: string
+  message: string
+}
+
+interface FormField {
+  key: FieldKey
+  label: string
+  type: string
 }
 
 const emit = defineEmits<{ submit: [payload: ContactFormState] }>()
 
-const reasonOptions = ['Event', 'Mariage', 'Corporate', 'Réception privée', 'Autre']
-const hearAboutUsOptions = ['Bouche à oreille', 'Réseaux sociaux', 'Autre']
+const typeOptions = ['WEDDING', 'CORPORATE', 'OTHERS']
 
 const formState = reactive<ContactFormState>({
-  reason: '',
-  countryOfResidence: '',
-  venueCountry: '',
+  type: 'WEDDING',
   name: '',
   email: '',
-  message: '',
-  wantsCallback: false,
   phone: '',
-  hearAboutUs: '',
-  eventDate: '',
-  eventType: '',
-  guestCount: '',
   venue: '',
-  coupleNames: '',
-  companyName: ''
+  eventDate: '',
+  subject: '',
+  message: ''
 })
 
-const dynamicFields = computed(() => {
-  switch (formState.reason) {
-    case 'Event':
-      return [
-        { key: 'eventDate', label: 'Date de l\'événement', type: 'date' },
-        { key: 'eventType', label: 'Type d\'événement', type: 'text' },
-        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' },
-        { key: 'venue', label: 'Lieu', type: 'text' }
+const baseFields: FormField[] = [
+  { key: 'name', label: 'Name', type: 'text' },
+  { key: 'email', label: 'E-mail', type: 'email' },
+  { key: 'phone', label: 'Phone', type: 'tel' }
+]
+
+const fields = computed<FormField[]>(() =>
+  formState.type === 'OTHERS'
+    ? [...baseFields, { key: 'subject', label: 'Subject', type: 'text' }, { key: 'message', label: 'Message', type: 'text' }]
+    : [
+        ...baseFields,
+        { key: 'venue', label: 'Venue (name, city...)', type: 'text' },
+        { key: 'eventDate', label: 'Date of the event', type: 'date' },
+        { key: 'message', label: 'Message', type: 'text' }
       ]
-    case 'Mariage':
-      return [
-        { key: 'eventDate', label: 'Date du mariage', type: 'date' },
-        { key: 'venue', label: 'Lieu de réception', type: 'text' },
-        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' },
-        { key: 'coupleNames', label: 'Noms des mariés', type: 'text' }
-      ]
-    case 'Corporate':
-      return [
-        { key: 'companyName', label: 'Nom de l\'entreprise', type: 'text' },
-        { key: 'eventDate', label: 'Date de l\'événement', type: 'date' },
-        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' }
-      ]
-    case 'Réception privée':
-      return [
-        { key: 'eventDate', label: 'Date de la réception', type: 'date' },
-        { key: 'venue', label: 'Lieu', type: 'text' },
-        { key: 'guestCount', label: 'Nombre d\'invités', type: 'number' }
-      ]
-    default:
-      return []
-  }
-})
+)
 
 const isSubmitted = ref(false)
 
