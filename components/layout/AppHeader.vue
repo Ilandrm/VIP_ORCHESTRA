@@ -25,7 +25,7 @@
         aria-label="Menu"
         @click="toggleMenu"
       >
-        <span v-if="!isMenuOpen" class="text-xs font-light uppercase tracking-[0.3em]">Menu</span>
+
         <svg v-if="isMenuOpen" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
           <path d="M4 4l16 16M20 4L4 20" />
         </svg>
