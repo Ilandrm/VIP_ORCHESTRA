@@ -22,7 +22,7 @@
     </section>
 
     <section>
-      <img :src="withBaseUrl('/gallery/photo-9.jpg')" alt="VIP Orchestra" loading="lazy" class="h-72 w-full object-cover md:h-[32rem]" />
+      <img :src="withBaseUrl('/gallery/photo-14.jpg')" alt="VIP Orchestra" loading="lazy" class="h-72 w-full object-cover object-[50%_35%] md:h-[32rem]" />
     </section>
 
     <section class="flex items-center justify-center gap-8 px-6 py-10 md:gap-20 md:py-16">

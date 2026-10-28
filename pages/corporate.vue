@@ -41,7 +41,7 @@ const tiles = [
   { title: 'Gala', image: withBaseUrl('/gallery/photo-15.jpg') }
 ]
 
-const photos: string[] = [7, 8, 9, 10, 11, 12].map(index => withBaseUrl(`/gallery/photo-${index}.jpg`))
+const photos: string[] = [9, 10, 11, 12, 14, 16].map(index => withBaseUrl(`/gallery/photo-${index}.jpg`))
 
 const brandLogos = useBrandLogos()
 

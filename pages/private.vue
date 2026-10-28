@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VideoBackground src="videos/ceremony.mp4" />
+    <VideoBackground src="videos/event_video.mp4" />
 
     <section class="px-6 py-10 text-center md:py-16">
       <h1 class="sr-only">Private</h1>
@@ -30,7 +30,7 @@ import VideoBackground from '~/components/media/VideoBackground.vue'
 import PhotoGallery from '~/components/sections/PhotoGallery.vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
-const photos: string[] = Array.from({ length: 12 }, (_, index) => withBaseUrl(`/gallery/photo-${index + 1}.jpg`))
+const photos: string[] = Array.from({ length: 8 }, (_, index) => withBaseUrl(`/gallery/photo-${index + 1}.jpg`))
 
 useSeoMeta({
   title: 'Private – VIP Orchestra',
