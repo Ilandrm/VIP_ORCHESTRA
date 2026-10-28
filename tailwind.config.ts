@@ -12,7 +12,7 @@ export default <Partial<Config>>{
       colors: {
         bg: '#000000',
         text: '#ffffff',
-        accent: '#cd2653'
+        accent: '#a3163c'
       },
       fontFamily: {
         sans: ['Playfair Display', 'serif']

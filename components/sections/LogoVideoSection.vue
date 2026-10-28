@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-bg px-6 py-2 text-center md:py-4">
+  <section class="bg-bg px-6 py-10 text-center md:py-16">
     <h2 class="sign text-2xl tracking-wide text-gold md:text-4xl">{{ title }}</h2>
     <div class="relative mx-auto mt-6 h-28 w-full max-w-[14rem] md:h-40 md:max-w-xs">
       <Transition name="logo-fade" mode="out-in">

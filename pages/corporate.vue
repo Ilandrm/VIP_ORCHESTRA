@@ -2,9 +2,9 @@
   <div>
     <VideoBackground src="videos/porsh.mp4" />
 
-    <section class="px-6 py-16 text-center md:py-24">
-      <h1 class="sign text-3xl tracking-wide text-gold md:text-5xl">Corporate</h1>
-      <div class="mx-auto mt-12 max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
+    <section class="px-6 py-10 text-center md:py-16">
+      <h1 class="sr-only">Corporate</h1>
+      <div class="mx-auto max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
         <p>
           Product launches, galas, fashion weeks and brand shows: VIP Orchestra brings live music and creative
           production to the most demanding corporate events around the world.
@@ -22,7 +22,7 @@
 
     <LogoVideoSection title="They trusted us" :logos="brandLogos" />
 
-    <section class="px-6 py-16 text-center md:py-18">
+    <section class="px-6 py-10 text-center md:py-16">
       <AppButton to="/contact" label="Contact us" variant="primary" class="inline-flex" />
     </section>
   </div>
@@ -36,11 +36,9 @@ import LogoVideoSection from '~/components/sections/LogoVideoSection.vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
 const tiles = [
+  { title: 'Production', image: withBaseUrl('/gallery/photo-17.jpg') },
   { title: 'Show', image: withBaseUrl('/gallery/photo-13.jpg') },
-  { title: 'Fashion Week', image: withBaseUrl('/gallery/photo-14.jpg') },
-  { title: 'Gala', image: withBaseUrl('/gallery/photo-15.jpg') },
-  { title: 'Product launch', image: withBaseUrl('/gallery/photo-16.jpg') },
-  { title: 'Production', image: withBaseUrl('/gallery/photo-17.jpg') }
+  { title: 'Gala', image: withBaseUrl('/gallery/photo-15.jpg') }
 ]
 
 const photos: string[] = [7, 8, 9, 10, 11, 12].map(index => withBaseUrl(`/gallery/photo-${index}.jpg`))

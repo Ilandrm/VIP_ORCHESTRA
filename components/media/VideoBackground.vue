@@ -3,7 +3,7 @@
     <video
       ref="videoRef"
       class="absolute inset-0 h-full w-full object-cover"
-      :poster="poster"
+      :poster="posterSrc"
       :autoplay="autoplay"
       :loop="loop"
       :muted="muted"
@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 
 interface VideoBackgroundProps {
   src: string
@@ -35,6 +35,8 @@ const props = withDefaults(defineProps<VideoBackgroundProps>(), {
   loop: true,
   muted: true
 })
+
+const posterSrc = computed(() => props.poster ?? withBaseUrl(`/posters/${props.src.split('/').pop()?.replace(/\.mp4$/, '')}.jpg`))
 
 const videoRef = ref<HTMLVideoElement | null>(null)
 
