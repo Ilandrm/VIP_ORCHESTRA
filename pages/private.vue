@@ -1,9 +1,9 @@
 <template>
   <div>
-    <section class="px-6 py-16 text-center md:py-24">
-      <h1 class="sign text-4xl tracking-wide text-gold md:text-6xl">Private</h1>
-      <p class="font-playfair-italic mt-6 text-lg text-text/70 md:text-2xl">Weddings &amp; private celebrations</p>
-      <div class="mx-auto mt-12 max-w-3xl space-y-6 text-sm leading-loose tracking-wide text-text/90 md:text-base">
+    <section class="px-6 py-4 text-center md:py-8">
+      <h1 class="sign text-3xl tracking-wide text-gold md:text-5xl">Private</h1>
+      <p class="font-playfair-italic mt-6 text-base text-text/70 md:text-xl">Weddings &amp; private celebrations</p>
+      <div class="mx-auto mt-12 max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
         <p>
           From the first notes of the ceremony to the last dance of the night, VIP Orchestra designs a musical journey
           around your story.
@@ -17,7 +17,7 @@
 
     <PhotoGallery :photos="photos" />
 
-    <section class="px-6 py-16 text-center md:py-24">
+    <section class="px-6 py-4 text-center md:py-8">
       <AppButton to="/contact" label="Contact us" variant="primary" class="inline-flex" />
     </section>
   </div>

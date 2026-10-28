@@ -3,9 +3,9 @@
     class="fixed inset-x-0 top-0 z-50 transition-colors duration-500"
     :class="isMenuOpen ? 'bg-bg' : 'bg-bg/80 backdrop-blur'"
   >
-    <div class="relative mx-auto flex max-w-7xl items-center justify-end px-6 py-6 md:justify-center md:px-10 md:py-7">
+    <div class="relative mx-auto flex max-w-7xl items-center justify-end px-6 py-3 md:justify-center md:px-10 md:py-7">
       <NuxtLink v-if="route.path !== '/'" to="/" class="absolute left-6 top-1/2 -translate-y-1/2 md:left-10" @click="handleNavClick">
-        <img :src="withBaseUrl('/images/logo.png')" alt="VIP" class="white-filter h-12 w-12 md:h-14 md:w-14" />
+        <img :src="withBaseUrl('/images/logo.png')" alt="VIP" class="white-filter h-9 w-9 md:h-14 md:w-14" />
       </NuxtLink>
 
       <nav class="hidden md:block">
@@ -38,7 +38,7 @@
 
     <Transition name="menu-fade">
       <div v-if="isMenuOpen" class="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-bg">
-        <ul class="flex flex-col items-center gap-8 text-xl font-light uppercase tracking-[0.3em] text-text">
+        <ul class="flex flex-col items-center gap-6 text-sm font-light uppercase tracking-[0.25em] text-text">
           <li v-for="link in navLinks" :key="link.to">
             <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
               {{ link.label }}

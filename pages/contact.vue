@@ -6,7 +6,7 @@
     </section>
 
     <div class="px-6 py-16 text-center md:py-24">
-      <h1 class="sign text-5xl leading-tight text-white md:text-7xl">Contact Us</h1>
+      <h1 class="sign text-4xl leading-tight text-white md:text-6xl">Contact Us</h1>
 
       <div class="mt-12 flex flex-col items-center gap-3 text-xs font-light uppercase tracking-[0.3em] text-text/80 md:text-sm">
         <a href="mailto:contact@vip-orchestra.com" class="transition-colors duration-300 hover:text-accent">
@@ -26,7 +26,7 @@
     </div>
 
     <section class="px-6 pb-16 text-center md:px-10">
-      <h2 class="sign text-3xl tracking-wide md:text-5xl">Follow us on Instagram</h2>
+      <h2 class="sign text-2xl tracking-wide md:text-4xl">Follow us on Instagram</h2>
       <div class="mx-auto mt-10 flex max-w-5xl items-center justify-center">
         <a href="https://www.instagram.com/vip_orchestra/" target="_blank" rel="noopener noreferrer" class="block w-full md:w-8/12">
           <img :src="withBaseUrl('/images/insta_test.jpeg')" alt="VIP Orchestra on Instagram" class="w-full object-cover transition-opacity hover:opacity-90" />

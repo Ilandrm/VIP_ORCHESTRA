@@ -3,8 +3,8 @@
     <VideoBackground src="videos/porsh.mp4" />
 
     <section class="px-6 py-16 text-center md:py-24">
-      <h1 class="sign text-4xl tracking-wide text-gold md:text-6xl">Corporate</h1>
-      <div class="mx-auto mt-12 max-w-3xl space-y-6 text-sm leading-loose tracking-wide text-text/90 md:text-base">
+      <h1 class="sign text-3xl tracking-wide text-gold md:text-5xl">Corporate</h1>
+      <div class="mx-auto mt-12 max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
         <p>
           Product launches, galas, fashion weeks and brand shows: VIP Orchestra brings live music and creative
           production to the most demanding corporate events around the world.

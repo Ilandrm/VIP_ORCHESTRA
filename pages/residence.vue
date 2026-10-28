@@ -6,8 +6,8 @@
       <img :src="withBaseUrl('/gallery/photo-3.jpg')" alt="VIP Orchestra Residence" loading="lazy" class="h-80 w-full object-cover md:h-full" />
       <div class="flex flex-col justify-center px-6 py-16 text-center md:px-16">
         <p class="text-xs font-light uppercase tracking-[0.3em] text-text/70 md:text-sm">Hotel · Bar · Restaurant</p>
-        <h1 class="sign mt-6 text-4xl tracking-wide text-gold md:text-6xl">Residence</h1>
-        <div class="mt-10 space-y-6 text-sm leading-loose tracking-wide text-text/90 md:text-base">
+        <h1 class="sign mt-6 text-3xl tracking-wide text-gold md:text-5xl">Residence</h1>
+        <div class="mt-10 space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
           <p>VIP Orchestra Residence offers a complete artistic experience to elevate your venue.</p>
           <p>
             We create a bespoke artistic and musical programme, perfectly in tune with the essence of your establishment.
@@ -22,7 +22,7 @@
     </section>
 
     <section>
-      <img :src="withBaseUrl('/gallery/photo-9.jpg')" alt="VIP Orchestra" loading="lazy" class="h-72 w-full object-cover md:h-[32rem]" />
+      <img :src="withBaseUrl('/gallery/photo-9.jpg')" alt="VIP Orchestra" loading="lazy" class="mx-auto h-auto max-h-[90vh] w-auto max-w-full object-contain" />
     </section>
 
     <section class="flex items-center justify-center gap-8 px-6 py-16 md:gap-20 md:py-24">

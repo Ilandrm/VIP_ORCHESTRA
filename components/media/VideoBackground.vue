@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-screen w-full overflow-hidden">
+  <div class="relative aspect-video w-full overflow-hidden md:aspect-auto md:h-screen">
     <video
       ref="videoRef"
       class="absolute inset-0 h-full w-full object-cover"

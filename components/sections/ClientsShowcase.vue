@@ -1,10 +1,10 @@
 <template xmlns="http://www.w3.org/1999/html">
   <section class="wrap-client px-6 py-16 text-center md:py-24">
-    <h2 class="center text-3xl tracking-wide md:text-5xl sign">{{ title }}</h2>
-    <p class="font-playfair-italic mx-auto mt-6 max-w-3xl text-lg text-text/60 md:text-xl">
+    <h2 class="center text-2xl tracking-wide md:text-4xl sign">{{ title }}</h2>
+    <p class="font-playfair-italic mx-auto mt-6 max-w-3xl text-base text-text/60 md:text-lg">
       — chaque note, un souvenir —
     </p>
-    <p class="mx-auto mt-10 max-w-4xl space-y-6 text-sm leading-loose tracking-wide md:text-base">
+    <p class="mx-auto mt-10 max-w-4xl space-y-6 text-[13px] leading-loose tracking-wide md:text-sm">
       <span class="block text-text">
         Orchestra s'occupe pour vous de toute la gestion logistique et artistique de votre évènement en France ou à l'International (Concerts, Plateaux télé, Festivals, Congrès, Expositions, Spectacles...), en mettant à disposition l'ensemble de son savoir faire et de son parc de matériel.
       </span>
