@@ -1,6 +1,6 @@
 <template>
   <section class="px-6 py-10 md:px-10 md:py-16">
-    <h2 v-if="title" class="sign mb-8 text-center text-2xl tracking-wide text-gold md:mb-10 md:text-4xl">{{ title }}</h2>
+    <h2 v-if="title" class="sign mb-8 text-center text-xl tracking-wide text-gold md:mb-10 md:text-3xl">{{ title }}</h2>
     <div ref="gridRef" class="mx-auto grid max-w-6xl auto-rows-[9rem] grid-flow-dense grid-cols-2 gap-2 md:auto-rows-[13rem] md:grid-cols-4 md:gap-3">
       <div
         v-for="(photo, index) in photos"

@@ -1,7 +1,7 @@
 <template>
   <section class="paddingTopBottom-s1 px-6 md:py-12">
     <div class="header-projects mb-12 text-center">
-      <h3 class="text-2xl tracking-wide md:text-4xl sign">
+      <h3 class="text-xl tracking-wide md:text-3xl sign">
         <slot name="title" />
       </h3>
       <h4 class="font-playfair-italic mt-10 text-sm uppercase tracking-widest text-text/70 md:text-2xl">

@@ -3,7 +3,7 @@
     <section class="grid md:grid-cols-2">
       <img :src="withBaseUrl('/gallery/photo-2.jpg')" alt="VIP Orchestra" loading="lazy" class="h-80 w-full object-cover md:h-full" />
       <div class="flex flex-col justify-center px-10 py-10 text-center md:px-24 md:py-16">
-        <h1 class="sign text-3xl leading-tight tracking-wide text-gold md:text-5xl">More than music, an experience.</h1>
+        <h1 class="sign text-2xl leading-tight tracking-wide text-gold md:text-4xl">More than music, an experience.</h1>
         <div class="mt-6 space-y-5 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
           <p v-for="paragraph in firstHalf" :key="paragraph">{{ paragraph }}</p>
         </div>

@@ -1,6 +1,6 @@
 <template xmlns="http://www.w3.org/1999/html">
   <section class="wrap-client px-6 py-16 text-center md:py-24">
-    <h2 class="center text-2xl tracking-wide md:text-4xl sign">{{ title }}</h2>
+    <h2 class="center text-xl tracking-wide md:text-3xl sign">{{ title }}</h2>
     <p class="font-playfair-italic mx-auto mt-6 max-w-3xl text-base text-text/60 md:text-lg">
       — chaque note, un souvenir —
     </p>
