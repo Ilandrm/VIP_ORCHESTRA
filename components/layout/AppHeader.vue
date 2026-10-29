@@ -38,7 +38,7 @@
 
     <Transition name="menu-fade">
       <div v-if="isMenuOpen" class="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-bg">
-        <ul class="flex flex-col items-center gap-6 text-sm font-light uppercase tracking-[0.25em] text-text">
+        <ul class="flex flex-col items-center gap-12 text-sm font-light uppercase tracking-[0.25em] text-text">
           <li v-for="link in navLinks" :key="link.to">
             <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
               {{ link.label }}

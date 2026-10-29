@@ -26,8 +26,3 @@ interface ClientsShowcaseProps {
 
 defineProps<ClientsShowcaseProps>()
 </script>
-<style>
-.sign {
-  font-family: 'Brittany Signature', cursive;
-}
-</style>

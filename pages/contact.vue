@@ -6,7 +6,7 @@
     </section>
 
     <div class="px-6 py-10 text-center md:py-16">
-      <h1 class="sign text-2xl leading-tight text-gold md:text-4xl">Contact Us</h1>
+      <h1 class="sr-only">Contact Us</h1>
 
       <div class="mt-8 flex flex-col items-center gap-3 text-xs font-light uppercase tracking-[0.3em] text-text/80 md:text-sm">
         <a href="mailto:contact@vip-orchestra.com" class="transition-colors duration-300 hover:text-accent">

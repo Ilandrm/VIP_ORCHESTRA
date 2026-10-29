@@ -29,9 +29,9 @@ const props = withDefaults(defineProps<AppButtonProps>(), {
 const isInternalLink = computed(() => !!props.to && props.to.startsWith('/'))
 
 const buttonClasses = computed(() => [
-  'inline-flex items-center justify-center rounded-full px-8 py-3 text-sm uppercase tracking-widest transition-colors duration-300',
+  'inline-flex items-center justify-center rounded-md px-6 py-2.5 text-xs uppercase tracking-widest transition-colors duration-300',
   props.variant === 'primary'
-    ? 'bg-text text-bg hover:bg-accent hover:text-text'
-    : 'border border-text text-text hover:border-accent hover:text-accent'
+    ? 'bg-text/85 text-bg hover:bg-accent hover:text-text'
+    : 'border border-text/60 text-text hover:border-accent hover:text-accent'
 ])
 </script>
