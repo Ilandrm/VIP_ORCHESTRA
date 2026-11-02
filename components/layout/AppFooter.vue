@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-bg px-6 pb-8 pt-24 text-center md:px-10 md:pt-32">
+  <footer class="bg-bg px-6 pb-8 pt-0 text-center md:px-10 md:pt-12">
     <ul class="flex items-center justify-center gap-8">
       <li v-for="social in socialLinks" :key="social.name">
         <a

@@ -1,7 +1,7 @@
 <template>
   <div class="md:block">
-    <div class="mx-auto max-w-5xl px-4 md:px-6">
-      <VideoBackground src="videos/home.mp4" mobile-full-height />
+    <div class="mx-auto mt-3 max-w-5xl px-4 md:px-6">
+      <VideoBackground src="videos/home.mp4" />
     </div>
   </div>
 </template>

@@ -26,19 +26,20 @@
         @click="toggleMenu"
       >
 
-        <svg v-if="isMenuOpen" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-          <path d="M4 4l16 16M20 4L4 20" />
+        <svg v-if="isMenuOpen" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18" />
         </svg>
-        <span v-else class="flex h-3 w-7 flex-col justify-between">
-          <span class="h-px w-full bg-text" />
-          <span class="h-px w-full bg-text" />
+        <span v-else class="flex h-4 w-7 flex-col justify-between">
+          <span class="h-px w-full rounded-full bg-text transition-all duration-300" />
+          <span class="h-px w-full rounded-full bg-text transition-all duration-300" />
+          <span class="h-px w-full rounded-full bg-text transition-all duration-300" />
         </span>
       </button>
     </div>
 
     <Transition name="menu-fade">
       <div v-if="isMenuOpen" class="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-bg">
-        <ul class="flex flex-col items-center gap-12 text-sm font-light uppercase tracking-[0.25em] text-text">
+        <ul class="flex flex-col items-center gap-10 text-xs font-light uppercase tracking-[0.25em] text-text">
           <li v-for="link in navLinks" :key="link.to">
             <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
               {{ link.label }}
