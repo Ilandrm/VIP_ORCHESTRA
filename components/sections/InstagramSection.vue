@@ -4,9 +4,6 @@
       class="px-4 pb-10 pt-12 text-center md:px-10 md:pb-14 md:pt-16"
   >
     <div class="mx-auto max-w-6xl">
-      <p class="mb-3 text-xs uppercase tracking-[0.3em] text-gold/80">
-        Retrouvez-nous
-      </p>
 
       <h2 class="sign text-2xl tracking-wide text-gold md:text-3xl">
         Follow us on Instagram
