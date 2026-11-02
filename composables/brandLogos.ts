@@ -11,7 +11,6 @@ const brandPaths: string[] = [
   '/brand/logos_blancs/pavillon-royal.png',
   '/brand/logos_blancs/hotel-du-collectionneur.png',
   '/brand/logos_blancs/chateauform.png',
-  '/brand/logos_blancs/wagram-music.png'
 ]
 
 const venuePaths: string[] = [
