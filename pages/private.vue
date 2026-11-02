@@ -2,10 +2,9 @@
   <div>
     <VideoBackground src="videos/event_video.mp4" />
 
-    <section class="px-6 py-10 text-center md:py-16">
-      <h1 class="sr-only">Private</h1>
-      <div class="mx-auto mt-6 max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
-        <p>
+    <section class="px-6 pt-10 text-center md:pt-16">
+      <div class="mx-auto max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-[16px]">
+        <p class="font-bold">
           From the first notes of the ceremony to the last dance of the night, VIP Orchestra designs a musical journey
           around your story.
         </p>
@@ -16,10 +15,10 @@
       </div>
     </section>
 
-    <PhotoGallery :photos="photos" />
+    <PhotoGallery :photos="photos" full-width />
 
     <section class="px-6 py-10 text-center md:py-16">
-      <AppButton to="/contact" label="Contact us" variant="primary" class="inline-flex" />
+      <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
     </section>
   </div>
 </template>
@@ -29,7 +28,70 @@ import VideoBackground from '~/components/media/VideoBackground.vue'
 import PhotoGallery from '~/components/sections/PhotoGallery.vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
-const photos: string[] = Array.from({ length: 8 }, (_, index) => withBaseUrl(`/gallery/photo-${index + 1}.jpg`))
+const photoFiles: string[] = [
+  '19-12-VIP-Armenonville-0019.jpg',
+  '2019-10-VIP-Baltard-0045-copie-scaled.jpg',
+  '2019-10-VIP-Baltard-0050-copie-scaled.jpg',
+  'IMG_1873-scaled.jpg',
+  'IMG_1921-scaled.jpg',
+  'IMG_1950-scaled.jpg',
+  'IMG_2676-scaled.jpg',
+  'IMG_2866-scaled.jpg',
+  'IMG_2935-scaled.jpg',
+  'IMG_3085-scaled.jpg',
+  'IMG_3149-scaled.jpg',
+  'PHOTO-2025-03-25-15-28-05-scaled.jpg',
+  'VIP-ORCHESTRA-100-scaled.jpg',
+  'VIP-ORCHESTRA-101-scaled.jpg',
+  'VIP-ORCHESTRA-103-scaled.jpg',
+  'VIP-ORCHESTRA-108-scaled.jpg',
+  'VIP-ORCHESTRA-109-scaled.jpg',
+  'VIP-ORCHESTRA-2023-0317-scaled.jpeg',
+  'VIP-ORCHESTRA-2-100-scaled.jpg',
+  'VIP-ORCHESTRA-2-102-scaled.jpg',
+  'VIP-ORCHESTRA-2-108-scaled.jpg',
+  'VIP-ORCHESTRA-2-10-scaled.jpg',
+  'VIP-ORCHESTRA-2-111-copie-scaled.jpg',
+  'VIP-ORCHESTRA-2-115-scaled.jpg',
+  'VIP-ORCHESTRA-2-121-scaled.jpg',
+  'VIP-ORCHESTRA-2-129-scaled.jpg',
+  'VIP-ORCHESTRA-2-136-scaled.jpg',
+  'VIP-ORCHESTRA-2-138-scaled.jpg',
+  'VIP-ORCHESTRA-2-139-scaled.jpg',
+  'VIP-ORCHESTRA-2-140-scaled.jpg',
+  'VIP-ORCHESTRA-2-144-scaled.jpg',
+  'VIP-ORCHESTRA-2-147-scaled.jpg',
+  'VIP-ORCHESTRA-2-18-scaled.jpg',
+  'VIP-ORCHESTRA-2-22-scaled.jpg',
+  'VIP-ORCHESTRA-2-30-scaled.jpg',
+  'VIP-ORCHESTRA-2-41-scaled.jpg',
+  'VIP-ORCHESTRA-2-45-scaled.jpg',
+  'VIP-ORCHESTRA-2-57-scaled.jpg',
+  'VIP-ORCHESTRA-2-59-scaled.jpg',
+  'VIP-ORCHESTRA-2-62-scaled.jpg',
+  'VIP-ORCHESTRA-2-72-scaled.jpg',
+  'VIP-ORCHESTRA-2-74-scaled.jpg',
+  'VIP-ORCHESTRA-2-75-scaled.jpg',
+  'VIP-ORCHESTRA-2-91-scaled.jpg',
+  'VIP-ORCHESTRA-2-93-scaled.jpg',
+  'VIP-ORCHESTRA-2-9831-scaled.jpg',
+  'VIP-ORCHESTRA-36-scaled.jpg',
+  'VIP-ORCHESTRA-38-scaled.jpg',
+  'VIP-ORCHESTRA-58-scaled.jpg',
+  'VIP-ORCHESTRA-65-scaled.jpg',
+  'VIP-ORCHESTRA-67-scaled.jpg',
+  'VIP-ORCHESTRA-71-scaled.jpg',
+  'VIP-ORCHESTRA-77-scaled.jpg',
+  'VIP-ORCHESTRA-85-scaled.jpg',
+  'VIP-ORCHESTRA-87-1-scaled.jpg',
+  'VIP-ORCHESTRA-89-scaled.jpg',
+  'VIP-ORCHESTRA-90-scaled.jpg',
+  'VIP-ORCHESTRA-93-scaled.jpg',
+  'VIP-ORCHESTRA-94-scaled.jpg',
+  'VIP-ORCHESTRA-_-WEDDINGS-0440-scaled.jpeg'
+]
+
+const photos: string[] = photoFiles.map(file => withBaseUrl(`/img_vip_final/${file}`))
 
 useSeoMeta({
   title: 'Private – VIP Orchestra',

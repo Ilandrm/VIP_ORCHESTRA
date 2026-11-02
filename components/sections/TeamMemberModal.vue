@@ -22,7 +22,7 @@
             <h3 class="text-xl font-semibold uppercase tracking-widest text-text">{{ member.name }}</h3>
             <p class="text-xs uppercase tracking-widest text-accent">{{ member.role }}</p>
           </div>
-          <p class="text-sm leading-relaxed text-text/80">{{ member.bio }}</p>
+          <p class="text-sm leading-relaxed text-text/80 md:text-base">{{ member.bio }}</p>
         </div>
       </div>
     </div>

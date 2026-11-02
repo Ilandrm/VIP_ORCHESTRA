@@ -4,7 +4,7 @@
     <p class="font-playfair-italic mx-auto mt-6 max-w-3xl text-base text-text/60 md:text-lg">
       — chaque note, un souvenir —
     </p>
-    <p class="mx-auto mt-10 max-w-4xl space-y-6 text-[13px] leading-loose tracking-wide md:text-sm">
+    <p class="mx-auto mt-10 max-w-4xl space-y-6 text-[13px] leading-loose tracking-wide md:text-base">
       <span class="block text-text">
         Orchestra s'occupe pour vous de toute la gestion logistique et artistique de votre évènement en France ou à l'International (Concerts, Plateaux télé, Festivals, Congrès, Expositions, Spectacles...), en mettant à disposition l'ensemble de son savoir faire et de son parc de matériel.
       </span>

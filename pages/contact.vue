@@ -24,15 +24,6 @@
         Thank you, your request has been sent. Our team will get back to you shortly.
       </p>
     </div>
-
-    <section class="px-6 pb-10 text-center md:px-10 md:pb-16">
-      <h2 class="sign text-xl tracking-wide text-gold md:text-3xl">Follow us on Instagram</h2>
-      <div class="mx-auto mt-10 flex max-w-5xl items-center justify-center">
-        <a href="https://www.instagram.com/vip_orchestra/" target="_blank" rel="noopener noreferrer" class="block w-full md:w-8/12">
-          <img :src="withBaseUrl('/images/insta_test.jpeg')" alt="VIP Orchestra on Instagram" class="w-full object-cover transition-opacity hover:opacity-90" />
-        </a>
-      </div>
-    </section>
   </div>
 </template>
 

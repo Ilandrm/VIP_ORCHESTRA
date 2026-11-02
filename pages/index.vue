@@ -1,10 +1,6 @@
 <template>
-  <div class="flex min-h-[calc(100svh-4rem)] items-center md:block md:min-h-0">
-    <VideoBackground src="videos/home.mp4">
-      <div class="absolute inset-x-0 bottom-4 flex justify-center md:bottom-12">
-        <AppButton to="/contact" label="Contact us" variant="outline" />
-      </div>
-    </VideoBackground>
+  <div class="md:block">
+    <VideoBackground src="videos/home.mp4" mobile-full-height />
   </div>
 </template>
 

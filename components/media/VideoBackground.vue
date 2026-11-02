@@ -1,5 +1,7 @@
 <template>
-  <div class="relative aspect-video w-full overflow-hidden md:aspect-auto md:h-screen">
+  <div :class="mobileFullHeight
+    ? 'relative h-[calc(100vh-4rem)] w-full overflow-hidden md:h-screen'
+    : 'relative aspect-video w-full overflow-hidden md:aspect-auto md:h-screen'">
     <video
       ref="videoRef"
       class="absolute inset-0 h-full w-full object-cover"
@@ -27,13 +29,15 @@ interface VideoBackgroundProps {
   autoplay?: boolean
   loop?: boolean
   muted?: boolean
+  mobileFullHeight?: boolean
 }
 
 const props = withDefaults(defineProps<VideoBackgroundProps>(), {
   poster: undefined,
   autoplay: true,
   loop: true,
-  muted: true
+  muted: true,
+  mobileFullHeight: false
 })
 
 const posterSrc = computed(() => props.poster ?? withBaseUrl(`/posters/${props.src.split('/').pop()?.replace(/\.mp4$/, '')}.jpg`))

@@ -8,11 +8,11 @@
         <p
           v-for="(paragraph, index) in section.paragraphs ?? []"
           :key="index"
-          class="text-sm leading-relaxed text-text/80"
+          class="text-sm leading-relaxed text-text/80 md:text-base"
         >
           {{ paragraph }}
         </p>
-        <ul v-if="section.list?.length" class="flex flex-col gap-1 pl-5 text-sm leading-relaxed text-text/80">
+        <ul v-if="section.list?.length" class="flex flex-col gap-1 pl-5 text-sm leading-relaxed text-text/80 md:text-base">
           <li v-for="(item, index) in section.list" :key="index" class="list-disc">{{ item }}</li>
         </ul>
       </article>
