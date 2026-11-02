@@ -6,6 +6,9 @@
         <p>{{ paragraphs[0] }}</p>
         <p v-for="(paragraph, i) in firstSectionParagraphs" :key="i" :class="{ 'font-bold': i % 2 === 0 }">{{ paragraph }}</p>
       </div>
+      <div class="mt-8 text-center">
+        <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
+      </div>
     </section>
 
     <section class="relative h-[50vh] w-full overflow-hidden">
@@ -22,8 +25,12 @@
           <p v-for="(paragraph, i) in secondSectionParagraphs" :key="i" :class="{ 'font-bold': i % 2 === 0 }">{{ paragraph }}</p>
           <p class="font-playfair-italic text-sm text-text md:text-base">One stage. Endless energy. Unforgettable moments.</p>
         </div>
+        <div class="mt-8 text-center">
+          <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
+        </div>
       </div>
       <img :src="withBaseUrl('/gallery/photo-5.jpg')" alt="VIP Orchestra" loading="lazy" class="order-1 h-80 w-full object-cover md:order-2 md:h-full" />
+
     </section>
 
     <section class="px-6 py-10 text-center md:px-10 md:py-16">
@@ -35,10 +42,6 @@
           <p class="mx-auto mt-3 max-w-sm text-[13px] leading-loose text-text/90 md:text-sm">{{ creator.bio }}</p>
         </article>
       </div>
-    </section>
-
-    <section class="px-6 pb-10 text-center md:pb-16">
-      <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
     </section>
   </div>
 </template>
