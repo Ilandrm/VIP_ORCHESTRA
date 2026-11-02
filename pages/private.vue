@@ -1,9 +1,9 @@
 <template>
   <div>
-    <VideoBackground src="videos/event_video.mp4" />
+    <VideoBackground src="videos/private.mp4" />
 
     <section class="px-6 pt-10 text-center md:pt-16">
-      <div class="mx-auto max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-[16px]">
+      <div class="mx-auto max-w-3xl space-y-6 text-[13px] leading-loose tracking-wide text-text/90 md:text-[14px]">
         <p class="font-bold">
           From the first notes of the ceremony to the last dance of the night, VIP Orchestra designs a musical journey
           around your story.
@@ -58,37 +58,7 @@ const photoFiles: string[] = [
   'VIP-ORCHESTRA-2-136-scaled.jpg',
   'VIP-ORCHESTRA-2-138-scaled.jpg',
   'VIP-ORCHESTRA-2-139-scaled.jpg',
-  'VIP-ORCHESTRA-2-140-scaled.jpg',
-  'VIP-ORCHESTRA-2-144-scaled.jpg',
-  'VIP-ORCHESTRA-2-147-scaled.jpg',
-  'VIP-ORCHESTRA-2-18-scaled.jpg',
-  'VIP-ORCHESTRA-2-22-scaled.jpg',
-  'VIP-ORCHESTRA-2-30-scaled.jpg',
-  'VIP-ORCHESTRA-2-41-scaled.jpg',
-  'VIP-ORCHESTRA-2-45-scaled.jpg',
-  'VIP-ORCHESTRA-2-57-scaled.jpg',
-  'VIP-ORCHESTRA-2-59-scaled.jpg',
-  'VIP-ORCHESTRA-2-62-scaled.jpg',
-  'VIP-ORCHESTRA-2-72-scaled.jpg',
-  'VIP-ORCHESTRA-2-74-scaled.jpg',
-  'VIP-ORCHESTRA-2-75-scaled.jpg',
-  'VIP-ORCHESTRA-2-91-scaled.jpg',
-  'VIP-ORCHESTRA-2-93-scaled.jpg',
-  'VIP-ORCHESTRA-2-9831-scaled.jpg',
-  'VIP-ORCHESTRA-36-scaled.jpg',
-  'VIP-ORCHESTRA-38-scaled.jpg',
-  'VIP-ORCHESTRA-58-scaled.jpg',
-  'VIP-ORCHESTRA-65-scaled.jpg',
-  'VIP-ORCHESTRA-67-scaled.jpg',
-  'VIP-ORCHESTRA-71-scaled.jpg',
-  'VIP-ORCHESTRA-77-scaled.jpg',
-  'VIP-ORCHESTRA-85-scaled.jpg',
-  'VIP-ORCHESTRA-87-1-scaled.jpg',
-  'VIP-ORCHESTRA-89-scaled.jpg',
-  'VIP-ORCHESTRA-90-scaled.jpg',
-  'VIP-ORCHESTRA-93-scaled.jpg',
-  'VIP-ORCHESTRA-94-scaled.jpg',
-  'VIP-ORCHESTRA-_-WEDDINGS-0440-scaled.jpeg'
+  'VIP-ORCHESTRA-2-140-scaled.jpg'
 ]
 
 const photos: string[] = photoFiles.map(file => withBaseUrl(`/img_vip_final/${file}`))

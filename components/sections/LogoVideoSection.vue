@@ -1,6 +1,6 @@
 <template>
   <section class="bg-bg px-6 py-10 text-center md:py-16">
-<h2 class="sign text-xl tracking-[0.4em] text-gold md:text-3xl">{{ title }}</h2>
+<h2 class="sign text-lg tracking-[0.6em] text-gold md:text-2xl">{{ title }}</h2>
     <div class="relative mx-auto mt-6 h-28 w-full max-w-[14rem] md:h-40 md:max-w-xs">
       <Transition name="logo-fade" mode="out-in">
         <img

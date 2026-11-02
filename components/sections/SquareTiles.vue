@@ -10,8 +10,8 @@
       >
         <img :src="tile.image" :alt="tile.title" loading="lazy" class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0 group-[.is-active]:scale-105 group-[.is-active]:grayscale-0" />
         <div class="absolute inset-0 flex flex-col items-center justify-center bg-bg/40 p-6 text-center transition-colors duration-500 group-hover:bg-bg/70 group-[.is-active]:bg-bg/70">
-          <h3 class="font-light uppercase tracking-[0.25em] text-text text-sm transition-colors duration-500 group-hover:text-gold group-[.is-active]:text-gold md:text-base">{{ tile.title }}</h3>
-          <p v-if="tile.description" class="mt-3 max-w-xs text-xs leading-relaxed opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.is-active]:opacity-100 text-text/80 md:text-base">{{ tile.description }}</p>
+          <h3 class="font-light uppercase tracking-[0.25em] text-text text-xs transition-colors duration-500 group-hover:text-accent group-[.is-active]:text-accent md:text-sm">{{ tile.title }}</h3>
+          <p v-if="tile.description" class="mt-3 max-w-xs text-xs leading-relaxed opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.is-active]:opacity-100 text-text/80 md:text-sm">{{ tile.description }}</p>
         </div>
       </div>
     </div>

@@ -5,9 +5,9 @@
     <section class="grid md:grid-cols-2">
       <img :src="withBaseUrl('/gallery/photo-3.jpg')" alt="VIP Orchestra Residence" loading="lazy" class="h-80 w-full object-cover md:h-full" />
       <div class="flex flex-col justify-center px-16 py-8 text-center md:px-32 md:py-12">
-        <p class="text-xs font-light uppercase tracking-[0.3em] text-text/70 md:text-sm">Hotel · Bar · Restaurant</p>
+        <p class="text-xs font-light uppercase tracking-[0.3em] text-text/70 md:text-xs">Hotel · Bar · Restaurant</p>
         <h1 class="sr-only">Residence</h1>
-        <div class="mt-6 space-y-5 text-[15px] leading-loose tracking-wide text-text/90 md:text-base">
+        <div class="mt-6 space-y-5 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
           <p>VIP Orchestra Residence offers a complete artistic experience to elevate your venue.</p>
           <p>
             We create a bespoke artistic and musical programme, perfectly in tune with the essence of your establishment.
@@ -18,6 +18,9 @@
             From live shows to musical performances, we stage unique moments in harmony with your values and your vision.
           </p>
         </div>
+        <div class="mt-8 text-center">
+          <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
+        </div>
       </div>
     </section>
 
@@ -27,12 +30,8 @@
 
     <section class="overflow-hidden py-10 md:py-16">
       <div class="marquee-track flex w-max items-center gap-12 md:gap-20">
-        <img v-for="(logo, i) in doubledLogos" :key="i" :src="logo" alt="" class="h-16 w-auto shrink-0 object-contain md:h-24" />
+        <img v-for="(logo, i) in doubledLogos" :key="i" :src="logo" alt="" class="h-12 w-auto shrink-0 object-contain md:h-20" />
       </div>
-    </section>
-
-    <section class="px-6 pb-10 text-center md:pb-16">
-      <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
     </section>
   </div>
 </template>

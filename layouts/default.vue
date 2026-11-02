@@ -4,7 +4,7 @@
     <main class="flex-1">
       <slot />
     </main>
-    <InstagramSection />
+    <InstagramSection v-if="route.path !== '/'" />
     <AppFooter />
   </div>
 </template>
@@ -13,4 +13,6 @@
 import AppHeader from '~/components/layout/AppHeader.vue'
 import AppFooter from '~/components/layout/AppFooter.vue'
 import InstagramSection from '~/components/sections/InstagramSection.vue'
+
+const route = useRoute()
 </script>

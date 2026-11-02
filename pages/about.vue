@@ -1,16 +1,10 @@
 <template>
   <div>
     <section class="px-6 py-10 text-center md:px-10 md:py-16">
-      <h1 class="sign text-2xl leading-tight tracking-wide text-gold md:text-4xl">MORE THAN MUSIC, AN EXPERIENCE</h1>
-      <p class="mx-auto mt-6 max-w-2xl text-[13px] leading-loose tracking-wide text-text/90 md:text-base">{{ paragraphs[0] }}</p>
-    </section>
-
-    <section class="grid md:grid-cols-2">
-      <img :src="withBaseUrl('/gallery/photo-2.jpg')" alt="VIP Orchestra" loading="lazy" class="h-80 w-full object-cover md:h-full" />
-      <div class="flex flex-col justify-center px-10 py-10 text-center md:px-24 md:py-16">
-        <div class="space-y-5 text-[13px] leading-loose tracking-wide text-text/90 md:text-base">
-          <p v-for="(paragraph, i) in firstSectionParagraphs" :key="i" :class="{ 'font-bold': i % 2 === 0 }">{{ paragraph }}</p>
-        </div>
+      <h1 class="sign text-xl leading-tight tracking-wide text-gold md:text-2xl">MORE THAN MUSIC. AN EXPERIENCE.</h1>
+      <div class="mx-auto mt-6 max-w-2xl space-y-5 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
+        <p>{{ paragraphs[0] }}</p>
+        <p v-for="(paragraph, i) in firstSectionParagraphs" :key="i" :class="{ 'font-bold': i % 2 === 0 }">{{ paragraph }}</p>
       </div>
     </section>
 
@@ -23,10 +17,10 @@
 
     <section class="grid md:grid-cols-2">
       <div class="order-2 flex flex-col justify-center px-10 py-10 text-center md:order-1 md:px-24 md:py-16">
-        <div class="space-y-5 text-[13px] leading-loose tracking-wide text-text/90 md:text-base">
+        <div class="space-y-5 text-[13px] leading-loose tracking-wide text-text/90 md:text-sm">
           <p class="font-bold text-accent">{{ paragraphs[4] }}</p>
           <p v-for="(paragraph, i) in secondSectionParagraphs" :key="i" :class="{ 'font-bold': i % 2 === 0 }">{{ paragraph }}</p>
-          <p class="font-playfair-italic text-base text-text md:text-lg">One stage. Endless energy. Unforgettable moments.</p>
+          <p class="font-playfair-italic text-sm text-text md:text-base">One stage. Endless energy. Unforgettable moments.</p>
         </div>
       </div>
       <img :src="withBaseUrl('/gallery/photo-5.jpg')" alt="VIP Orchestra" loading="lazy" class="order-1 h-80 w-full object-cover md:order-2 md:h-full" />
@@ -36,9 +30,9 @@
       <div class="mx-auto grid max-w-4xl gap-10 md:grid-cols-2">
         <article v-for="creator in creators" :key="creator.name">
           <img :src="creator.photo" :alt="creator.name" class="mx-auto h-64 w-64 rounded-2xl object-cover" />
-          <h3 class="mt-4 text-base uppercase tracking-[0.25em] text-text">{{ creator.name }}</h3>
-          <p class="font-playfair-italic mt-2 text-base text-text/70">{{ creator.role }}</p>
-          <p class="mx-auto mt-3 max-w-sm text-[13px] leading-loose text-text/90 md:text-base">{{ creator.bio }}</p>
+          <h3 class="mt-4 text-sm uppercase tracking-[0.25em] text-text">{{ creator.name }}</h3>
+          <p class="font-playfair-italic mt-2 text-sm text-text/70">{{ creator.role }}</p>
+          <p class="mx-auto mt-3 max-w-sm text-[13px] leading-loose text-text/90 md:text-sm">{{ creator.bio }}</p>
         </article>
       </div>
     </section>

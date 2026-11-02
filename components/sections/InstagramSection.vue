@@ -3,9 +3,9 @@
       aria-label="VIP Orchestra sur Instagram"
       class="px-4 pb-10 pt-12 text-center md:px-10 md:pb-14 md:pt-16"
   >
-    <div class="mx-auto max-w-6xl">
+    <div>
 
-      <h2 class="sign text-2xl tracking-wide text-gold md:text-3xl">
+      <h2 class="sign text-lg tracking-wide text-gold md:text-xl">
         Follow us on Instagram
       </h2>
 
