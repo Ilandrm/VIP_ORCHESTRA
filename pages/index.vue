@@ -1,6 +1,6 @@
 <template>
-  <div class="md:block">
-    <div class="mx-auto mt-3 max-w-5xl px-4 md:px-6">
+  <div class="flex min-h-[calc(100vh-4rem)] items-center md:block">
+    <div class="mx-auto w-full max-w-5xl px-4 md:mt-3 md:px-6">
       <VideoBackground src="videos/home.mp4" />
     </div>
   </div>

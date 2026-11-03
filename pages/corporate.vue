@@ -43,9 +43,9 @@ import LogoVideoSection from '~/components/sections/LogoVideoSection.vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
 const tiles = [
-  { title: 'Production', description: 'Full-service event production with sound, lighting and visual design tailored to your brand.', image: withBaseUrl('/gallery/photo-17.jpg') },
+  { title: 'Gala', description: 'Elegant gala entertainment, from ceremony to finale, tailored to your vision.', image: withBaseUrl('/gallery/photo-15.jpg') },
   { title: 'Show', description: 'Live performances and bespoke musical shows crafted for unforgettable brand experiences.', image: withBaseUrl('/gallery/photo-13.jpg') },
-  { title: 'Gala', description: 'Elegant gala entertainment, from ceremony to finale, tailored to your vision.', image: withBaseUrl('/gallery/photo-15.jpg') }
+  { title: 'Production', description: 'Full-service event production with sound, lighting and visual design tailored to your brand.', image: withBaseUrl('/posters/stage.jpg') }
 ]
 
 const photos: string[] = [

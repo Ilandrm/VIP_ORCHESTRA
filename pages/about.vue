@@ -34,7 +34,7 @@
     </section>
 
     <section class="px-6 py-10 text-center md:px-10 md:py-16">
-      <div class="mx-auto grid max-w-4xl gap-10 md:grid-cols-2">
+      <div class="grid justify-items-center gap-10 md:grid-cols-5">
         <article v-for="creator in creators" :key="creator.name">
           <img :src="creator.photo" :alt="creator.name" class="mx-auto h-64 w-64 rounded-2xl object-cover" />
           <h3 class="mt-4 text-sm uppercase tracking-[0.25em] text-text">{{ creator.name }}</h3>
@@ -50,8 +50,73 @@
 import AppButton from '~/components/ui/AppButton.vue'
 
 const creators = [
-  { name: 'Joseph', photo: withBaseUrl('/team/IMG_5210b-300x300.jpg'), role: 'Artistic Director', bio: 'Shapes the musical universe and creative vision of every VIP Orchestra performance.' },
-  { name: 'Jonathan', photo: withBaseUrl('/team/IMG_5582-300x300.jpg'), role: 'Technical Director', bio: 'Oversees sound, lighting and production to ensure complete artistic and technical harmony.' }
+  { name: 'Joseph', photo: withBaseUrl('/team/IMG_5210b-300x300.jpg'), role: 'Artistic Director' },
+  { name: 'Jonathan', photo: withBaseUrl('/team/IMG_5582-300x300.jpg'), role: 'Technical Director'},
+  {
+    name: 'Cyril',
+    role: 'Chanteur / Création artistique',
+    photo: withBaseUrl('/team/LIO_2617-2-300x300.jpg')
+  },
+  {
+    name: 'Charlotte',
+    role: 'Chef de projet',
+    photo: withBaseUrl('/team/IMG_9109-300x300.jpg')
+  },
+  {
+    name: 'Salomé',
+    role: 'Chef de projet',
+    photo: withBaseUrl('/team/salome.jpg')
+  },
+  {
+    name: 'Alexandra',
+    role: 'Marketing',
+    photo: withBaseUrl('/team/IMG_9110-300x300.jpg')
+  },
+  {
+    name: 'John',
+    role: 'DJ',
+    photo: withBaseUrl('/team/John.jpg')
+  },
+  {
+    name: 'Caroline',
+    role: 'Violoniste',
+    photo: withBaseUrl('/team/691526D4-2BBE-4009-8904-A2F1C7AE70F8_1_105_c-300x300.jpg')
+  },
+  {
+    name: 'Marco',
+    role: 'Saxophoniste',
+    photo: withBaseUrl('/team/black-jazzman-plays-the-saxophone-on-stage-WL9RCSH-300x300.jpg')
+  },
+  {
+    name: 'Filiz',
+    role: 'Pianiste',
+    photo: withBaseUrl('/team/IMG_0639-300x300.jpg')
+  },
+  {
+    name: 'Landry',
+    role: 'Guitariste',
+    photo: withBaseUrl('/team/landry.jpg')
+  },
+  {
+    name: 'Beverly',
+    role: 'Percussioniste',
+    photo: withBaseUrl('/team/beverly.jpg')
+  },
+  {
+    name: 'Vampi',
+    role: 'Chorégraphe',
+    photo: withBaseUrl('/team/vampi.jpg')
+  },
+  {
+    name: 'Maxime',
+    role: 'Pupitreur Lumières',
+    photo: withBaseUrl('/team/Maxime.jpg')
+  },
+  {
+    name: 'Raphael',
+    role: 'Ingénieur son',
+    photo: withBaseUrl('/team/raph.jpeg')
+  },
 ]
 
 const paragraphs: string[] = [

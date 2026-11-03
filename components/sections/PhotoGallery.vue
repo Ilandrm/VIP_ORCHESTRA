@@ -1,12 +1,11 @@
 <template>
   <section :class="fullWidth ? 'py-10 md:py-16' : 'px-6 py-10 md:px-10 md:py-16'">
     <h2 v-if="title" class="sign mb-8 text-center text-lg tracking-wide text-gold md:mb-10 md:text-xl">{{ title }}</h2>
-    <div ref="gridRef" :class="[fullWidth ? '' : 'mx-auto max-w-6xl', 'grid auto-rows-[9rem] grid-flow-dense grid-cols-2 gap-2 md:auto-rows-[13rem] md:grid-cols-4 md:gap-3']">
+    <div ref="gridRef" :class="[fullWidth ? '' : 'mx-auto max-w-6xl', 'columns-2 gap-2 md:columns-4 md:gap-3']">
       <div
         v-for="(photo, index) in photos"
         :key="photo"
-        class="mosaic-item group cursor-pointer overflow-hidden"
-        :class="spanClass(index)"
+        class="mosaic-item group mb-2 block w-full cursor-pointer overflow-hidden break-inside-avoid md:mb-3"
         :style="{ transitionDelay: `${(index % 4) * 90}ms` }"
         @click="openLightbox(index)"
       >
@@ -14,7 +13,7 @@
           :src="photo"
           :alt="`VIP Orchestra ${index + 1}`"
           loading="lazy"
-          class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+          class="w-full transition duration-700 group-hover:scale-105"
         />
       </div>
     </div>
@@ -87,10 +86,6 @@ const props = withDefaults(defineProps<PhotoGalleryProps>(), {
   title: undefined,
   fullWidth: false
 })
-
-const pattern = ['col-span-2 row-span-2', '', 'row-span-2', '', 'col-span-2', '', '', 'col-span-2 row-span-2']
-
-const spanClass = (index: number) => pattern[index % pattern.length]
 
 const lightboxIndex = ref<number | null>(null)
 const { lock, unlock } = useBodyScrollLock()
