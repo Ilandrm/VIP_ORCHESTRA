@@ -33,14 +33,15 @@
 
     </section>
 
-    <section class="px-6 py-10 text-center md:px-10 md:py-16">
+    <section class="px-5 py-10 text-center md:px-24 md:py-16">
       <h2 class="sign mb-10 text-lg tracking-wide text-gold md:mb-12 md:text-xl">OUR TEAM</h2>
-      <div class="grid justify-items-center gap-10 md:grid-cols-5 md:gap-8">
-        <article v-for="creator in creators" :key="creator.name">
-          <img :src="creator.photo" :alt="creator.name" class="mx-auto h-64 w-64 object-cover" />
-          <h3 class="mt-4 text-sm uppercase tracking-[0.25em] text-text">{{ creator.name }}</h3>
-          <p class="font-playfair-italic mt-2 text-sm text-text/70">{{ creator.role }}</p>
-          <p class="mx-auto mt-3 max-w-sm text-[13px] leading-loose text-text/90 md:text-sm">{{ creator.bio }}</p>
+      <div class="mx-auto grid max-w-5xl grid-cols-3 justify-items-center gap-x-4 gap-y-8 md:grid-cols-5 md:gap-x-6 md:gap-y-12">
+        <!-- Dernier membre seul sur sa ligne (16 membres : reste 1 en 3 et 5 colonnes) → colonne du milieu -->
+        <article v-for="(creator, i) in creators" :key="creator.name" :class="i === creators.length - 1 ? 'col-start-2 md:col-start-3' : ''">
+          <img :src="creator.photo" :alt="creator.name" class="mx-auto aspect-square w-full max-w-[110px] rounded-sm object-cover md:max-w-44" />
+          <h3 class="mt-3 text-[10px] uppercase tracking-[0.15em] text-text md:mt-4 md:text-sm md:tracking-[0.25em]">{{ creator.name }}</h3>
+          <p class="font-playfair-italic mt-1 text-[10px] text-text/70 md:mt-2 md:text-sm">{{ creator.role }}</p>
+          <p class="mx-auto mt-3 hidden max-w-sm text-[13px] leading-loose text-text/90 md:block md:text-sm">{{ creator.bio }}</p>
         </article>
       </div>
     </section>
@@ -71,7 +72,7 @@ const creators = [
   {
     name: 'Salomé',
     role: 'Chef de projet',
-    photo: withBaseUrl('/team/salome.jpg')
+    photo: withBaseUrl('/team/salome.jpeg')
   },
   {
     name: 'Alexandra',
