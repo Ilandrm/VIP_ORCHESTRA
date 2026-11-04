@@ -11,7 +11,12 @@
       <nav class="hidden md:block">
         <ul class="flex items-center justify-center gap-12 text-xs font-light uppercase tracking-[0.3em] text-text">
           <li v-for="link in navLinks" :key="link.to">
-            <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
+            <NuxtLink
+              :to="link.to"
+              class="transition-colors duration-300 hover:text-accent"
+              :class="route.path === link.to ? 'text-accent' : ''"
+              @click="handleNavClick"
+            >
               {{ link.label }}
             </NuxtLink>
           </li>
@@ -38,10 +43,15 @@
     </div>
 
     <Transition name="menu-fade">
-      <div v-if="isMenuOpen" class="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-bg">
+      <div v-if="isMenuOpen" class="fixed inset-0 z-40 flex h-dvh w-screen flex-col items-center justify-center bg-bg">
         <ul class="flex flex-col items-center gap-10 text-xs font-light uppercase tracking-[0.25em] text-text">
           <li v-for="link in navLinks" :key="link.to">
-            <NuxtLink :to="link.to" class="transition-colors duration-300 hover:text-accent" @click="handleNavClick">
+            <NuxtLink
+              :to="link.to"
+              class="transition-colors duration-300 hover:text-accent"
+              :class="route.path === link.to ? 'text-accent' : ''"
+              @click="handleNavClick"
+            >
               {{ link.label }}
             </NuxtLink>
           </li>

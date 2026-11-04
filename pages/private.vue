@@ -15,9 +15,9 @@
       </div>
     </section>
 
-    <PhotoGallery :photos="photos" full-width />
+    <PhotoGallery :photos="photos" full-width compact />
 
-    <section class="px-6 py-10 text-center md:py-16">
+    <section class="px-6 pb-3 pt-2 text-center md:pb-5 md:pt-4">
       <AppButton to="/contact" label="Contact us" variant="text" class="inline-flex" />
     </section>
   </div>

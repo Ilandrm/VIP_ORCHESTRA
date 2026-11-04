@@ -5,8 +5,8 @@
       <div class="absolute inset-0 bg-bg/40" />
     </section>
 
-    <div class="px-6 py-10 text-center md:py-16">
-      <h1 class="sign text-lg tracking-[0.25em] text-gold md:text-xl">Contact Us</h1>
+    <div class="px-6 pb-10 pt-4 text-center md:pb-16 md:pt-8">
+      <h1 class="sign text-xl leading-tight tracking-wide text-gold md:text-2xl">CONTACT US</h1>
 
       <div class="mt-8 flex flex-col items-center gap-3 text-xs font-light uppercase tracking-[0.3em] text-text/80 md:text-sm">
         <a href="mailto:contact@vip-orchestra.com" class="transition-colors duration-300 hover:text-accent">

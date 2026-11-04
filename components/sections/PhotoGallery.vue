@@ -1,5 +1,7 @@
 <template>
-  <section :class="fullWidth ? 'py-10 md:py-16' : 'px-6 py-10 md:px-10 md:py-16'">
+  <section :class="fullWidth
+    ? (compact ? 'pb-4 pt-10 md:pb-6 md:pt-16' : 'py-10 md:py-16')
+    : 'px-6 py-10 md:px-10 md:py-16'">
     <h2 v-if="title" class="sign mb-8 text-center text-lg tracking-wide text-gold md:mb-10 md:text-xl">{{ title }}</h2>
     <div ref="gridRef" :class="[fullWidth ? '' : 'mx-auto max-w-6xl', 'columns-2 gap-2 md:columns-4 md:gap-3']">
       <div
@@ -80,11 +82,13 @@ interface PhotoGalleryProps {
   photos: string[]
   title?: string
   fullWidth?: boolean
+  compact?: boolean
 }
 
 const props = withDefaults(defineProps<PhotoGalleryProps>(), {
   title: undefined,
-  fullWidth: false
+  fullWidth: false,
+  compact: false
 })
 
 const lightboxIndex = ref<number | null>(null)

@@ -108,4 +108,13 @@ const handleSubmit = () => {
   outline: none;
   border-bottom-color: var(--color-accent);
 }
+
+.input-field[type='date'] {
+  text-align: center;
+}
+
+.input-field[type='date']::-webkit-datetime-edit {
+  justify-content: center;
+  text-align: center;
+}
 </style>

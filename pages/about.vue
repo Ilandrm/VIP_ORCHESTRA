@@ -34,9 +34,10 @@
     </section>
 
     <section class="px-6 py-10 text-center md:px-10 md:py-16">
-      <div class="grid justify-items-center gap-10 md:grid-cols-5">
+      <h2 class="sign mb-10 text-lg tracking-wide text-gold md:mb-12 md:text-xl">OUR TEAM</h2>
+      <div class="grid justify-items-center gap-10 md:grid-cols-5 md:gap-8">
         <article v-for="creator in creators" :key="creator.name">
-          <img :src="creator.photo" :alt="creator.name" class="mx-auto h-64 w-64 rounded-2xl object-cover" />
+          <img :src="creator.photo" :alt="creator.name" class="mx-auto h-64 w-64 object-cover" />
           <h3 class="mt-4 text-sm uppercase tracking-[0.25em] text-text">{{ creator.name }}</h3>
           <p class="font-playfair-italic mt-2 text-sm text-text/70">{{ creator.role }}</p>
           <p class="mx-auto mt-3 max-w-sm text-[13px] leading-loose text-text/90 md:text-sm">{{ creator.bio }}</p>
@@ -61,6 +62,11 @@ const creators = [
     name: 'Charlotte',
     role: 'Chef de projet',
     photo: withBaseUrl('/team/IMG_9109-300x300.jpg')
+  },
+  {
+    name: 'Fiona',
+    role: 'Chef de projet',
+    photo: withBaseUrl('/team/fiona.jpeg')
   },
   {
     name: 'Salomé',
