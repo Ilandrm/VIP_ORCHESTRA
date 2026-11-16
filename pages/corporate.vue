@@ -20,11 +20,13 @@
     </section>
     <SquareTiles :tiles="tiles" />
 
-    <section class="relative h-[50vh] w-full overflow-hidden md:h-[60vh]">
-      <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
-        <source :src="withBaseUrl('/videos/corporate_2.mp4')" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-bg/30" />
+    <section class="mx-auto w-full max-w-[854px] overflow-hidden">
+      <div class="relative aspect-video w-full">
+        <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+          <source :src="withBaseUrl('/videos/corporate_2.mp4')" type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-bg/30" />
+      </div>
     </section>
 
     <LogoVideoSection title="THEY TRUSTED US" :logos="brandLogos" />
