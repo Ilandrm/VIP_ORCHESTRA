@@ -4,7 +4,7 @@
     <main class="flex-1">
       <slot />
     </main>
-    <InstagramSection v-if="route.path !== '/'" />
+    <InstagramSection v-if="!hiddenInstagramPaths.includes(route.path)" />
     <AppFooter />
   </div>
 </template>
@@ -15,4 +15,5 @@ import AppFooter from '~/components/layout/AppFooter.vue'
 import InstagramSection from '~/components/sections/InstagramSection.vue'
 
 const route = useRoute()
+const hiddenInstagramPaths = ['/', '/residence', '/about']
 </script>

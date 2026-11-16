@@ -43,9 +43,9 @@ import LogoVideoSection from '~/components/sections/LogoVideoSection.vue'
 import AppButton from '~/components/ui/AppButton.vue'
 
 const tiles = [
-  { title: 'Gala', description: 'Elegant gala entertainment, from ceremony to finale, tailored to your vision.', image: withBaseUrl('/gallery/photo-15.jpg') },
-  { title: 'Show', description: 'Live performances and bespoke musical shows crafted for unforgettable brand experiences.', image: withBaseUrl('/gallery/photo-13.jpg') },
-  { title: 'Production', description: 'Full-service event production with sound, lighting and visual design tailored to your brand.', image: withBaseUrl('/posters/stage.jpg') }
+  { title: 'Gala', description: 'Elegant gala entertainment, from ceremony to finale, tailored to your vision.', image: withBaseUrl('/images/gala.jpeg') },
+  { title: 'Show', description: 'Live performances and bespoke musical shows crafted for unforgettable brand experiences.', image: withBaseUrl('/images/show.jpeg') },
+  { title: 'Production', description: 'Full-service event production with sound, lighting and visual design tailored to your brand.', image: withBaseUrl('/images/production.jpeg') }
 ]
 
 const photos: string[] = [
@@ -81,7 +81,7 @@ const photos: string[] = [
   '2019-10-VIP-Baltard-0045-copie-scaled.jpg'
 ].map(file => withBaseUrl(`/img_vip_final/${file}`))
 
-const brandLogos = useBrandLogos().filter(logo => !logo.includes('wagram-music'))
+const brandLogos = useBrandLogos()
 
 useSeoMeta({
   title: 'Corporate – VIP Orchestra',

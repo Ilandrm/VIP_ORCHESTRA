@@ -56,22 +56,22 @@ const creators = [
   { name: 'Jonathan', photo: withBaseUrl('/team/IMG_5582-300x300.jpg'), role: 'Technical Director'},
   {
     name: 'Cyril',
-    role: 'Chanteur / Création artistique',
+    role: 'Singer / Artistic Creation',
     photo: withBaseUrl('/team/LIO_2617-2-300x300.jpg')
   },
   {
     name: 'Charlotte',
-    role: 'Chef de projet',
+    role: 'Project Manager',
     photo: withBaseUrl('/team/IMG_9109-300x300.jpg')
   },
   {
     name: 'Fiona',
-    role: 'Chef de projet',
-    photo: withBaseUrl('/team/fiona.jpeg')
+    role: 'Project Manager',
+    photo: withBaseUrl('/team/fiona-300x300.jpg')
   },
   {
     name: 'Salomé',
-    role: 'Chef de projet',
+    role: 'Project Manager',
     photo: withBaseUrl('/team/salome.jpeg')
   },
   {
@@ -86,42 +86,42 @@ const creators = [
   },
   {
     name: 'Caroline',
-    role: 'Violoniste',
+    role: 'Violinist',
     photo: withBaseUrl('/team/691526D4-2BBE-4009-8904-A2F1C7AE70F8_1_105_c-300x300.jpg')
   },
   {
     name: 'Marco',
-    role: 'Saxophoniste',
+    role: 'Saxophonist',
     photo: withBaseUrl('/team/black-jazzman-plays-the-saxophone-on-stage-WL9RCSH-300x300.jpg')
   },
   {
     name: 'Filiz',
-    role: 'Pianiste',
+    role: 'Pianist',
     photo: withBaseUrl('/team/IMG_0639-300x300.jpg')
   },
   {
     name: 'Landry',
-    role: 'Guitariste',
+    role: 'Guitarist',
     photo: withBaseUrl('/team/landry.jpg')
   },
   {
     name: 'Beverly',
-    role: 'Percussioniste',
+    role: 'Percussionist',
     photo: withBaseUrl('/team/beverly.jpg')
   },
   {
     name: 'Vampi',
-    role: 'Chorégraphe',
+    role: 'Choreographer',
     photo: withBaseUrl('/team/vampi.jpg')
   },
   {
     name: 'Maxime',
-    role: 'Pupitreur Lumières',
+    role: 'Lighting operator',
     photo: withBaseUrl('/team/Maxime.jpg')
   },
   {
     name: 'Raphael',
-    role: 'Ingénieur son',
+    role: 'Sound engineer',
     photo: withBaseUrl('/team/raph.jpeg')
   },
 ]

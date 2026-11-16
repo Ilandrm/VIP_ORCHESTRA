@@ -3,6 +3,6 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.inspiration-music.com/sitemap_index.xml
+Sitemap: https://vip-orchestra.com/sitemap.xml
 # ---------------------------
 # END YOAST BLOCK

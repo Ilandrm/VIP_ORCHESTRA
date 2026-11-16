@@ -1,6 +1,8 @@
 <template>
   <div>
-    <VideoBackground src="videos/stage.mp4" />
+    <section class="relative aspect-video w-full overflow-hidden md:aspect-auto md:h-screen">
+      <img :src="withBaseUrl('/images/residence.jpeg')" alt="VIP Orchestra Residence" class="absolute inset-0 h-full w-full object-cover" />
+    </section>
 
     <section class="grid md:grid-cols-2">
       <img :src="withBaseUrl('/gallery/photo-3.jpg')" alt="VIP Orchestra Residence" loading="lazy" class="h-80 w-full object-cover md:h-full" />
@@ -38,7 +40,6 @@
 
 <script setup lang="ts">
 import AppButton from '~/components/ui/AppButton.vue'
-import VideoBackground from '~/components/media/VideoBackground.vue'
 
 const logos = useBrandLogos()
 const doubledLogos = [...logos, ...logos]

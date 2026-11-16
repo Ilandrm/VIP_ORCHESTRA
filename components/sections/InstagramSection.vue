@@ -1,7 +1,7 @@
 <template>
   <section
       aria-label="VIP Orchestra sur Instagram"
-      class="px-4 pb-10 pt-12 text-center md:px-10 md:pb-14 md:pt-16"
+      class="px-4 pb-10 pt-6 text-center md:px-10 md:pb-14 md:pt-8"
   >
     <div>
 
@@ -24,7 +24,7 @@
           aria-hidden="true"
       >
         <div
-            v-for="index in 12"
+            v-for="index in 6"
             :key="index"
             class="aspect-square bg-neutral-800"
         />
@@ -35,7 +35,7 @@
           class="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:mt-10 md:grid-cols-6 md:gap-3"
       >
         <a
-            v-for="post in posts.slice(0, 12)"
+            v-for="post in posts.slice(0, 6)"
             :key="post.href"
             :href="post.href"
             target="_blank"
