@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "gh-pages -d .output/public -t"
+    "start": "node .output/server/index.mjs"
   },
   "dependencies": {
     "@nuxtjs/seo": "^2.2.0",
@@ -23,7 +23,6 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@types/node": "^22.9.0",
-    "gh-pages": "^6.2.0",
     "typescript": "^5.6.3",
     "vue-tsc": "^3.3.11"
   }

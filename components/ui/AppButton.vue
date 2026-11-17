@@ -5,7 +5,7 @@
   <a v-else-if="to" :href="to" target="_blank" rel="noopener noreferrer" :class="buttonClasses">
     {{ label }}
   </a>
-  <button v-else :type="type" :class="buttonClasses">
+  <button v-else :type="type" :disabled="disabled" :class="buttonClasses">
     {{ label }}
   </button>
 </template>
@@ -18,18 +18,21 @@ interface AppButtonProps {
   label: string
   variant?: 'primary' | 'outline' | 'text'
   type?: 'button' | 'submit'
+  disabled?: boolean
 }
 
 const props = withDefaults(defineProps<AppButtonProps>(), {
   to: undefined,
   variant: 'primary',
-  type: 'button'
+  type: 'button',
+  disabled: false
 })
 
 const isInternalLink = computed(() => !!props.to && props.to.startsWith('/'))
 
 const buttonClasses = computed(() => [
   'inline-flex items-center justify-center text-xs uppercase tracking-widest transition-colors duration-300',
+  props.disabled ? 'pointer-events-none opacity-50' : '',
   props.variant === 'primary'
     ? 'bg-text/85 text-bg hover:bg-accent hover:text-text rounded-md px-6 py-2.5'
     : props.variant === 'outline'

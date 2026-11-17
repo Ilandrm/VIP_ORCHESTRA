@@ -14,7 +14,11 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      instagramApiUrl: process.env.NUXT_PUBLIC_INSTAGRAM_API_URL || 'http://localhost:4000'
+      apiBaseUrl:
+        process.env.NUXT_PUBLIC_API_BASE_URL ||
+        process.env.NUXT_PUBLIC_INSTAGRAM_API_URL ||
+        'http://localhost:4000',
+      turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || ''
     }
   },
 

@@ -17,25 +17,14 @@
       </div>
 
       <div class="mt-10 md:mt-12">
-        <ContactForm @submit="handleSubmit" />
+        <ContactForm />
       </div>
-
-      <p v-if="isConfirmed" class="mt-10 text-sm uppercase tracking-widest text-accent">
-        Thank you, your request has been sent. Our team will get back to you shortly.
-      </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import ContactForm from '~/components/forms/ContactForm.vue'
-
-const isConfirmed = ref(false)
-
-const handleSubmit = () => {
-  isConfirmed.value = true
-}
 
 useSeoMeta({
   title: 'Contact us – VIP Orchestra',
